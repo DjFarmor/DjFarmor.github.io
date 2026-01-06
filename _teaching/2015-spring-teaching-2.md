@@ -1,20 +1,11 @@
 ---
-title: "Teaching experience 2"
+title: "Fundamentals in neuroscience"
 collection: teaching
-type: "Workshop"
+type: "Graduate course"
 permalink: /teaching/2015-spring-teaching-1
-venue: "University 1, Department"
-date: 2015-01-01
-location: "City, Country"
+venue: "Institute of Basic Medical Sciences, University of Oslo"
+date: 2018-08-08
+location: "Oslo, Norway"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
-
-Heading 1
-======
-
-Heading 2
-======
-
-Heading 3
-======
+Held a few lectures on brain scale theories and models of the central nervous system, including Predictive Coding, Entropy Maximization, spatial organization, connectivity, and similar. 
