@@ -57,7 +57,7 @@ author:
 
   # Social media
   artstation       : # Username
-  bluesky          : "https://bsky.app/profile/turntwine.bsky.social" # Replace this with you Bluesky username
+  bluesky          : "@turntwine.bsky.social" # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
@@ -66,7 +66,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : "https://www.linkedin.com/in/andre-sevenius-nilsen-b70771190/"
+  linkedin         : "www.linkedin.com/in/andre-sevenius-nilsen-b70771190"
   mastodon         : # URL
   medium           : "https://medium.com/@sevenius-nilsen"
   pinterest        : # Username
@@ -81,6 +81,7 @@ author:
   xing             : # Username
   youtube          : # Username
   zhihu            : # Username
+  itch             : "https://thosecreativepursuits.itch.io/"
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
