@@ -1,0 +1,117 @@
+\documentclass[10pt, a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=1.8cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{ifthen}
+
+\definecolor{accent}{HTML}{2d5986}
+\definecolor{lightgray}{gray}{0.5}
+
+\hypersetup{
+  colorlinks = true,
+  urlcolor   = accent,
+  linkcolor  = accent,
+  citecolor  = accent,
+  pdfauthor  = {Andre Sevenius Nilsen},
+  pdftitle   = {Short CV -- Andre Sevenius Nilsen},
+}
+
+\titleformat{\section}{\large\bfseries\color{accent}}{}{0em}{}%
+  [\vspace{-0.4em}\rule{\linewidth}{0.5pt}]
+\titlespacing{\section}{0pt}{1.2em}{0.5em}
+
+\newcommand{\cventry}[4]{%
+  \noindent
+  \begin{minipage}[t]{2.5cm}\small\color{lightgray}#1\end{minipage}%
+  \hspace{0.4em}%
+  \begin{minipage}[t]{\dimexpr\textwidth-2.9cm\relax}%
+    \textbf{#2}%
+    \ifthenelse{\equal{#3}{}}{}{\newline\textit{#3}}%
+    \ifthenelse{\equal{#4}{}}{}{\newline\small #4}%
+  \end{minipage}%
+  \par\vspace{0.4em}%
+}
+
+\newcommand{\cvitem}[2]{%
+  \noindent
+  \begin{minipage}[t]{2.5cm}\small\color{lightgray}#1\end{minipage}%
+  \hspace{0.4em}%
+  \begin{minipage}[t]{\dimexpr\textwidth-2.9cm\relax}#2\end{minipage}%
+  \par\vspace{0.3em}%
+}
+
+\begin{document}
+\pagestyle{plain}
+
+\begin{center}
+  {\huge\bfseries Andr\'e Sevenius Nilsen}\\[0.4em]
+  {\normalsize
+    Oslo, Norway
+    \quad\textbar\quad
+    \href{mailto:sevenius.nilsen@gmail.com}{sevenius.nilsen@gmail.com}
+    \quad\textbar\quad
+    \href{https://djfarmor.github.io}{djfarmor.github.io}%
+  }
+\end{center}
+
+\vspace{0.6em}
+
+\section{Employment}
+
+\cventry{2020--present}{Position Title}{Institution Name, City}{Brief description of role and responsibilities.}
+
+\section{Education}
+
+\cventry{2020}{Ph.D., Field of Study}{University Name, City}{Thesis: \textit{Thesis title goes here}. Supervisor: Supervisor Name}
+\cventry{2016}{M.Sc., Field of Study}{University Name, City}{}
+\cventry{2014}{B.Sc., Field of Study}{University Name, City}{}
+
+\section{Selected Publications (last 5)}
+\begin{enumerate}[leftmargin=2em, label={[\arabic*]}, itemsep=0.25em]
+  \item Your Name, You. (2024). \&quot;Paper Title Number 3.\&quot; <i>GitHub Journal of Bugs</i>. 1(3).  \href{https://academicpages.github.io/files/paper3.pdf}{[link]}
+  \item Your Name, You. (2024). \&quot;Paper Title Number 3.\&quot; <i>GitHub Journal of Bugs</i>. 1(3).  \href{https://academicpages.github.io/files/paper3.pdf}{[link]}
+  \item Your Name, You. (2015). \&quot;Paper Title Number 3.\&quot; <i>Journal 1</i>. 1(3).  \href{https://academicpages.github.io/files/paper3.pdf}{[link]}
+  \item Your Name, You. (2010). \&quot;Paper Title Number 2.\&quot; <i>Journal 1</i>. 1(2).  \href{https://academicpages.github.io/files/paper2.pdf}{[link]}
+  \item Your Name, You. (2009). \&quot;Paper Title Number 1.\&quot; <i>Journal 1</i>. 1(1).  \href{https://academicpages.github.io/files/paper1.pdf}{[link]}
+\end{enumerate}
+
+\section{Talks \& Presentations}
+
+\cventry{2014}{Conference Proceeding talk 3 on Relevant Topic in Your Field}{Testing Institute of America 2014 Annual Conference, Los Angeles, CA, USA}{}
+\cventry{2014}{Talk 2 on Relevant Topic in Your Field}{London School of Testing, London, UK}{}
+\cventry{2013}{Tutorial 1 on Relevant Topic in Your Field}{UC-Berkeley Institute for Testing Science, Berkeley, CA, USA}{}
+\cventry{2012}{Talk 1 on Relevant Topic in Your Field}{UC San Francisco, Department of Testing, San Francisco, CA, USA}{}
+
+\section{Teaching}
+
+\cventry{2021}{Multidisciplinary consciousness science}{Institute of Psychology, University of Oslo}{}
+\cventry{2018}{Fundamentals in neuroscience}{Institute of Basic Medical Sciences, University of Oslo}{}
+\cventry{2013}{Introduction to research methods and statistics}{Institute of Psychology, University of Oslo}{}
+
+\section{Grants \& Stipends}
+
+\cventry{2023}{Grant or Stipend Name}{Funding Agency}{100,000 NOK}
+
+\section{Awards \& Honours}
+
+\cventry{2022}{Award Name}{Awarding Body}{}
+
+\section{Selected Software \& Repositories}
+
+\cventry{}{\href{https://github.com/DjFarmor/repo-name}{repo-name}}{}{Brief description of the repository.}
+
+\section{Skills}
+
+\cvitem{Programming}{Python, R, LaTeX, JavaScript}
+\cvitem{Methods}{Method A, Method B}
+\cvitem{Languages}{Norwegian (Native), English (Fluent)}
+
+\end{document}
