@@ -1,5 +1,5 @@
-%% Curriculum Vitae — André Sevenius Nilsen
-%% Compiled automatically via GitHub Actions → files/cv.pdf
+%% Curriculum Vitae -- Andre Sevenius Nilsen
+%% Full CV. Compiled automatically via GitHub Actions -> files/cv.pdf
 
 \documentclass[11pt, a4paper]{article}
 
@@ -14,124 +14,164 @@
 \usepackage{enumitem}
 \usepackage{parskip}
 \usepackage{microtype}
-\usepackage{tabularx}
-\usepackage{array}
+\usepackage{ifthen}
 
 % ---------- Colours ----------
 \definecolor{accent}{HTML}{2d5986}
+\definecolor{lightgray}{gray}{0.5}
 
 % ---------- Hyperlinks ----------
 \hypersetup{
-  colorlinks=true,
-  linkcolor=accent,
-  urlcolor=accent,
-  citecolor=accent,
-  pdfauthor={André Sevenius Nilsen},
-  pdftitle={CV — André Sevenius Nilsen},
+  colorlinks = true,
+  urlcolor   = accent,
+  linkcolor  = accent,
+  citecolor  = accent,
+  pdfauthor  = {Andre Sevenius Nilsen},
+  pdftitle   = {CV -- Andre Sevenius Nilsen},
 }
 
-% ---------- Section formatting ----------
+% ---------- Section headings ----------
 \titleformat{\section}
   {\large\bfseries\color{accent}}
-  {}{0em}{}[\vspace{-0.5em}\rule{\linewidth}{0.5pt}]
+  {}{0em}{}[\vspace{-0.4em}\rule{\linewidth}{0.5pt}]
 \titlespacing{\section}{0pt}{1.4em}{0.6em}
 
-% ---------- Entry command ----------
-% \entry{year(s)}{title}{institution/venue}{description}
-\newcommand{\entry}[4]{%
-  \begin{tabularx}{\linewidth}{@{} p{2.6cm} X @{}}
-    \small\textcolor{gray}{#1} & \textbf{#2}\newline\textit{#3}%
-    \ifx&#4&\else\newline\small #4\fi
-  \end{tabularx}\vspace{0.4em}%
+\titleformat{\subsection}[runin]
+  {\normalsize\bfseries}
+  {}{0em}{}[.\quad]
+\titlespacing{\subsection}{0pt}{0.8em}{0em}
+
+% ---------- Entry macro ----------
+% Usage: \cventry{YEAR(S)}{TITLE}{INSTITUTION}{NOTES (optional)}
+\newcommand{\cventry}[4]{%
+  \noindent
+  \begin{minipage}[t]{2.7cm}%
+    \small\color{lightgray}#1%
+  \end{minipage}%
+  \hspace{0.4em}%
+  \begin{minipage}[t]{\dimexpr\textwidth-3.1cm\relax}%
+    \textbf{#2}%
+    \ifthenelse{\equal{#3}{}}{}{\newline\textit{#3}}%
+    \ifthenelse{\equal{#4}{}}{}{\newline\small #4}%
+  \end{minipage}%
+  \par\vspace{0.45em}%
 }
 
-% ---------- Simple item command ----------
+% ---------- Simple label/value row ----------
 \newcommand{\cvitem}[2]{%
-  \begin{tabularx}{\linewidth}{@{} p{2.6cm} X @{}}
-    \small\textcolor{gray}{#1} & #2
-  \end{tabularx}\vspace{0.3em}%
+  \noindent
+  \begin{minipage}[t]{2.7cm}%
+    \small\color{lightgray}#1%
+  \end{minipage}%
+  \hspace{0.4em}%
+  \begin{minipage}[t]{\dimexpr\textwidth-3.1cm\relax}%
+    #2%
+  \end{minipage}%
+  \par\vspace{0.3em}%
 }
 
-% ---------- Document ----------
+% ==========================================================
 \begin{document}
 \pagestyle{plain}
 
-% Header
+% ---------- Header ----------
 \begin{center}
-  {\Huge\bfseries André Sevenius Nilsen}\\[0.4em]
-  {\large Scientist · Writer · Philosopher}\\[0.5em]
-  Oslo, Norway \quad|\quad
-  \href{mailto:sevenius.nilsen@gmail.com}{sevenius.nilsen@gmail.com} \quad|\quad
+  {\Huge\bfseries Andr\'e Sevenius Nilsen}\\[0.5em]
+  {\large Scientist \textbullet{} Writer \textbullet{} Philosopher}\\[0.6em]
+  Oslo, Norway
+  \quad\textbar\quad
+  \href{mailto:sevenius.nilsen@gmail.com}{sevenius.nilsen@gmail.com}
+  \quad\textbar\quad
   \href{https://djfarmor.github.io}{djfarmor.github.io}\\[0.3em]
-  \href{https://scholar.google.com/citations?user=A1E5s7AAAAAJ&hl=en}{Google Scholar} \quad|\quad
-  \href{https://www.linkedin.com/in/andre-sevenius-nilsen-b70771190}{LinkedIn} \quad|\quad
+  \href{https://scholar.google.com/citations?user=A1E5s7AAAAAJ&hl=en}{Google Scholar}
+  \quad\textbar\quad
+  \href{https://www.linkedin.com/in/andre-sevenius-nilsen-b70771190}{LinkedIn}
+  \quad\textbar\quad
   \href{https://bsky.app/profile/turntwine.bsky.social}{Bluesky}
 \end{center}
 
-\vspace{1em}
+\vspace{0.8em}
 
-% ----------------------------------------------------------------
+% ==========================================================
 \section{Employment}
 
-\entry{XXXX--present}{Position Title}{Institution, City}{}
-\entry{XXXX--XXXX}{Previous Position}{Institution, City}{}
+\cventry{XXXX--present}{Position Title}{Institution, City}{}
+\cventry{XXXX--XXXX}{Previous Position}{Institution, City}{}
 
-% ----------------------------------------------------------------
+% ==========================================================
 \section{Education}
 
-\entry{XXXX}{Ph.D., Field}{University, City}{Thesis: \textit{Title here.} Supervisor: Name.}
-\entry{XXXX}{M.Sc., Field}{University, City}{}
-\entry{XXXX}{B.Sc., Field}{University, City}{}
+\cventry{XXXX}{Ph.D., Field}{University, City}%
+  {Thesis: \textit{Title here.} Supervisor: Name.}
+\cventry{XXXX}{M.Sc., Field}{University, City}{}
+\cventry{XXXX}{B.Sc., Field}{University, City}{}
 
-% ----------------------------------------------------------------
+% ==========================================================
 \section{Publications}
 
 \subsection*{Journal Articles}
 
-\begin{enumerate}[leftmargin=*, label={[\arabic*]}]
-  \item Author, \textbf{A.S.N.}, \& Author. (Year). Title of article. \textit{Journal Name}, \textit{Volume}(Issue), pages. \href{https://doi.org/}{doi:}
+\begin{enumerate}[leftmargin=2em, label={[\arabic*]}, itemsep=0.3em]
+  \item Author, \textbf{A.S.N.}, \& Author. (Year).
+        Title of article.
+        \textit{Journal Name}, \textit{Volume}(Issue), pp.~xx--xx.
+        \href{https://doi.org/}{doi:xx.xxxx/xxxxx}
 \end{enumerate}
 
-\subsection*{Book Chapters \& Books}
+\subsection*{Conference Proceedings}
 
-\begin{enumerate}[leftmargin=*, label={[\arabic*]}]
-  \item Author, \textbf{A.S.N.} (Year). \textit{Book Title}. Publisher.
+\begin{enumerate}[leftmargin=2em, label={[\arabic*]}, itemsep=0.3em]
+  \item Author, \textbf{A.S.N.}, \& Author. (Year).
+        Title of paper.
+        In \textit{Proceedings of Conference Name} (pp.~xx--xx).
 \end{enumerate}
 
-% ----------------------------------------------------------------
+\subsection*{Books \& Book Chapters}
+
+\begin{enumerate}[leftmargin=2em, label={[\arabic*]}, itemsep=0.3em]
+  \item \textbf{A.S.N.} (Year). \textit{Book Title}. Publisher.
+\end{enumerate}
+
+% ==========================================================
 \section{Talks \& Presentations}
 
-\entry{XXXX}{Talk Title}{Conference / Institution, City}{}
-\entry{XXXX}{Talk Title}{Conference / Institution, City}{}
+\cventry{XXXX}{Talk Title}{Conference / Institution, City}{}
+\cventry{XXXX}{Talk Title}{Conference / Institution, City}{}
 
-% ----------------------------------------------------------------
+% ==========================================================
 \section{Teaching}
 
-\entry{XXXX}{Course Title}{Institution}{\small Role: Lecturer / Teaching Assistant.}
+\cventry{XXXX}{Course Title}{Institution}{Role: Lecturer.}
 
-% ----------------------------------------------------------------
-\section{Awards \& Funding}
+% ==========================================================
+\section{Grants \& Stipends}
 
-\entry{XXXX}{Award or Grant Name}{Institution / Funder}{}
+\cventry{XXXX}{Grant Name}{Funding Agency}{Amount: XXX,XXX NOK.}
 
-% ----------------------------------------------------------------
+% ==========================================================
+\section{Awards \& Honours}
+
+\cventry{XXXX}{Award Name}{Awarding Body}{}
+
+% ==========================================================
 \section{Service}
 
-\begin{itemize}[leftmargin=*, itemsep=0.1em]
-  \item Reviewer: \textit{Journal Name}, \textit{Journal Name}
-  \item Member: Society Name
+\begin{itemize}[leftmargin=2em, itemsep=0.2em]
+  \item \textbf{Reviewer:} \textit{Journal Name A}, \textit{Journal Name B}
+  \item \textbf{Committee member:} Committee name
 \end{itemize}
 
-% ----------------------------------------------------------------
+% ==========================================================
 \section{Skills}
 
-\cvitem{Languages}{Norwegian (native), English (fluent), \ldots}
-\cvitem{Software}{\LaTeX, Python, R, \ldots}
-\cvitem{Methods}{Method 1, Method 2, \ldots}
+\cvitem{Programming}{Python, R, \LaTeX}
+\cvitem{Languages}{Norwegian (native), English (fluent)}
+\cvitem{Methods}{Method A, Method B}
 
-% ----------------------------------------------------------------
-\section{Other}
+% ==========================================================
+\section{Other Interests}
 
-\cvitem{Interests}{Consciousness, AI, philosophy of mind, speculative fiction, game design.}
+Consciousness science, philosophy of mind, artificial intelligence,
+speculative fiction, game design.
 
 \end{document}

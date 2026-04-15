@@ -1,0 +1,133 @@
+# CV details data file.
+# Used by:
+#   - Jekyll detail sub-pages (/cv/education/, /cv/employment/, etc.)
+#   - scripts/generate_short_cv.py (auto-builds cv-short.tex)
+#   - _pages/cv-visual.md (graphical CV)
+
+# ----------------------------------------------------------------
+# EMPLOYMENT
+# ----------------------------------------------------------------
+employment:
+  - title: Position Title
+    institution: Institution Name
+    city: City
+    start: 2020
+    end: present
+    description: Brief description of role and responsibilities.
+  # - title: Previous Position
+  #   institution: Institution Name
+  #   city: City
+  #   start: 2017
+  #   end: 2020
+  #   description: Brief description.
+
+# ----------------------------------------------------------------
+# EDUCATION
+# ----------------------------------------------------------------
+education:
+  - degree: Ph.D.
+    field: Field of Study
+    institution: University Name
+    city: City
+    year: 2020
+    thesis: "Thesis title goes here"
+    supervisor: Supervisor Name
+  - degree: M.Sc.
+    field: Field of Study
+    institution: University Name
+    city: City
+    year: 2016
+    thesis: ""
+    supervisor: ""
+  - degree: B.Sc.
+    field: Field of Study
+    institution: University Name
+    city: City
+    year: 2014
+    thesis: ""
+    supervisor: ""
+
+# ----------------------------------------------------------------
+# GRANTS & STIPENDS
+# ----------------------------------------------------------------
+grants:
+  - title: Grant or Stipend Name
+    funder: Funding Agency
+    amount: 100000
+    currency: NOK
+    year: 2023
+    description: Brief description of the project funded.
+  # - title: Another Grant
+  #   funder: Funder Name
+  #   amount: 50000
+  #   currency: NOK
+  #   year: 2021
+  #   description: ""
+
+# ----------------------------------------------------------------
+# AWARDS & HONOURS
+# ----------------------------------------------------------------
+awards:
+  - title: Award Name
+    institution: Awarding Body
+    year: 2022
+    description: ""
+  # - title: Another Award
+  #   institution: Awarding Body
+  #   year: 2020
+  #   description: ""
+
+# ----------------------------------------------------------------
+# SERVICE / REVIEWS
+# ----------------------------------------------------------------
+reviews:
+  total_count: 0          # approximate total papers reviewed
+  journals:
+    - name: Journal Name A
+      count: 0
+    # - name: Journal Name B
+    #   count: 0
+
+committees:
+  - name: Committee or Role Name
+    institution: Institution
+    year: 2023
+
+# ----------------------------------------------------------------
+# SKILLS
+# ----------------------------------------------------------------
+skills:
+  programming:
+    - name: Python
+      level: 90        # 0-100, used for radar/bar chart in visual CV
+    - name: R
+      level: 70
+    - name: LaTeX
+      level: 85
+    - name: JavaScript
+      level: 50
+  methods:
+    - name: Method A
+      level: 80
+    - name: Method B
+      level: 70
+  languages:
+    - name: Norwegian
+      level: 100
+      note: Native
+    - name: English
+      level: 95
+      note: Fluent
+
+# ----------------------------------------------------------------
+# GITHUB REPOS (highlighted)
+# ----------------------------------------------------------------
+github_repos:
+  - name: repo-name
+    url: https://github.com/DjFarmor/repo-name
+    description: Brief description of the repository.
+    stars: 0
+  # - name: another-repo
+  #   url: https://github.com/DjFarmor/another-repo
+  #   description: ""
+  #   stars: 0

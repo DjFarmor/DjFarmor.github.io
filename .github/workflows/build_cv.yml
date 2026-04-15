@@ -1,13 +1,20 @@
-name: Build LaTeX CV
+name: Build LaTeX CVs
 
 on:
   push:
     paths:
       - 'files/cv.tex'
-  workflow_dispatch:   # allow manual trigger from GitHub UI
+      - 'files/cv-short.tex'
+      - '_publications/**'
+      - '_talks/**'
+      - '_teaching/**'
+      - '_portfolio/**'
+      - '_data/cv_details.yml'
+      - 'scripts/generate_short_cv.py'
+  workflow_dispatch:
 
 jobs:
-  build-cv:
+  build-cvs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -16,19 +23,44 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Compile LaTeX CV
-        uses: xu-cheng/latex-action@v3
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          root_file: cv.tex
-          working_directory: files/
-          # Uses the full TeX Live installation; pdflatex by default.
-          # Switch to latexmk_shell_escape: true if you need shell-escape.
+          python-version: '3.12'
 
-      - name: Commit compiled PDF
+      - name: Install Python dependencies
+        run: pip install pyyaml python-frontmatter
+
+      - name: Generate short CV from collections
+        run: python scripts/generate_short_cv.py
+
+      - name: Install LaTeX (lightweight)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends \
+            texlive \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            cm-super \
+            lmodern
+
+      - name: Compile full CV (two passes)
+        run: |
+          cd files
+          pdflatex -interaction=nonstopmode cv.tex
+          pdflatex -interaction=nonstopmode cv.tex
+
+      - name: Compile short CV (two passes)
+        run: |
+          cd files
+          pdflatex -interaction=nonstopmode cv-short.tex
+          pdflatex -interaction=nonstopmode cv-short.tex
+
+      - name: Commit compiled PDFs
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add files/cv.pdf
+          git add files/cv.pdf files/cv-short.pdf
           git diff --cached --quiet && echo "No changes to commit." || \
-            git commit -m "chore: auto-build CV PDF [skip ci]"
+            git commit -m "chore: auto-build CV PDFs [skip ci]"
           git push
