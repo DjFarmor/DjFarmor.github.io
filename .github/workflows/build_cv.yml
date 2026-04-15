@@ -66,4 +66,5 @@ jobs:
           git add files/cv.pdf files/cv-short.pdf
           git diff --cached --quiet && echo "No changes to commit." || \
             git commit -m "chore: auto-build CV PDFs [skip ci]"
-          git push
+          git pull --rebase origin master
+          git push origin master
