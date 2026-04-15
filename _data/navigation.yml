@@ -1,0 +1,47 @@
+# Main navigation links in the header.
+# Supports one level of dropdown children.
+
+main:
+  - title: "Blog"
+    url: /blog/
+
+  - title: "Academic"
+    url: /academic/
+    children:
+      - title: "Publications"
+        url: /publications/
+      - title: "Talks"
+        url: /talks/
+      - title: "Teaching"
+        url: /teaching/
+      - title: "Projects"
+        url: /projects/
+      - title: "Other"
+        url: /academic-other/
+
+  - title: "CV"
+    url: /cv/
+
+  - title: "Services"
+    url: /services/
+
+  - title: "Other"
+    url: /other/
+    children:
+      - title: "Fiction"
+        url: /fiction/
+      - title: "Miscellaneous"
+        url: /other-misc/
+
+# Sidebar navigation for Academic > Other sub-pages
+academic_other:
+  - title: "Academic Other"
+    children:
+      - title: "Reviews"
+        url: /reviews/
+      - title: "Interests"
+        url: /interests/
+      - title: "Skills"
+        url: /skills/
+      - title: "Other"
+        url: /academic-other-misc/

@@ -1,0 +1,34 @@
+name: Build LaTeX CV
+
+on:
+  push:
+    paths:
+      - 'files/cv.tex'
+  workflow_dispatch:   # allow manual trigger from GitHub UI
+
+jobs:
+  build-cv:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX CV
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: cv.tex
+          working_directory: files/
+          # Uses the full TeX Live installation; pdflatex by default.
+          # Switch to latexmk_shell_escape: true if you need shell-escape.
+
+      - name: Commit compiled PDF
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add files/cv.pdf
+          git diff --cached --quiet && echo "No changes to commit." || \
+            git commit -m "chore: auto-build CV PDF [skip ci]"
+          git push
