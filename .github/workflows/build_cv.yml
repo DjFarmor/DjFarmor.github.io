@@ -59,6 +59,12 @@ jobs:
           pdflatex -interaction=nonstopmode cv-short.tex
           pdflatex -interaction=nonstopmode cv-short.tex
 
+      - name: Clean up LaTeX artifacts
+        run: |
+          cd files
+          git clean -fd
+          git checkout -- .
+
       - name: Commit and push compiled PDFs
         run: |
           git config user.name  "github-actions[bot]"
