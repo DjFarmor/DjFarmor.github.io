@@ -1,3 +1,176 @@
-{% assign first_pubs = journal_pubs | where_exp: 'p', 'p.author_role == "first" or p.author_role == "first_and_senior"' %}
+---
+layout: page
+title: "Publications"
+permalink: /publications/
+author_profile: true
+---
 
-{% assign senior_pubs = journal_pubs | where_exp: 'p', 'p.author_role == "senior" or p.author_role == "first_and_senior"' %}
+<style>
+  details {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  details summary {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 10px 0;
+    user-select: none;
+  }
+  
+  details summary:hover {
+    color: #0066cc;
+  }
+  
+  details[open] summary {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .pub-item {
+    margin: 15px 0;
+    padding: 10px;
+    border-left: 3px solid #0066cc;
+    background-color: white;
+  }
+  
+  .pub-title {
+    font-weight: bold;
+    font-size: 1.05em;
+    margin-bottom: 5px;
+  }
+  
+  .pub-authors {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .pub-venue {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .pub-links {
+    margin-top: 8px;
+  }
+  
+  .pub-links a {
+    margin-right: 10px;
+    color: #0066cc;
+    text-decoration: none;
+  }
+  
+  .pub-links a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+{% assign publications = site.publications | sort: 'date' | reverse %}
+
+{% assign books = publications | where: 'category', 'book' %}
+{% assign journals = publications | where: 'category', 'journal' %}
+{% assign monographs = publications | where: 'category', 'monograph' %}
+{% assign posters = publications | where: 'category', 'poster' %}
+{% assign popular = publications | where: 'category', 'popular_science' %}
+
+{% if books.size > 0 %}
+<details>
+  <summary>📚 Books ({{ books.size }})</summary>
+  {% for pub in books %}
+  <div class="pub-item">
+    <div class="pub-title">{{ pub.title }}</div>
+    {% if pub.authors %}<div class="pub-authors">{{ pub.authors }}</div>{% endif %}
+    {% if pub.venue %}<div class="pub-venue">{{ pub.venue }} ({{ pub.date | date: "%Y" }})</div>{% endif %}
+    {% if pub.excerpt %}<div class="pub-excerpt">{{ pub.excerpt }}</div>{% endif %}
+    {% if pub.paperurl %}
+    <div class="pub-links">
+      <a href="{{ pub.paperurl }}" target="_blank">Read Online</a>
+    </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+</details>
+{% endif %}
+
+{% if journals.size > 0 %}
+<details>
+  <summary>📄 Journal Articles ({{ journals.size }})</summary>
+  {% for pub in journals %}
+  <div class="pub-item">
+    <div class="pub-title">{{ pub.title }}</div>
+    {% if pub.authors %}<div class="pub-authors">{{ pub.authors }}</div>{% endif %}
+    {% if pub.venue %}<div class="pub-venue">{{ pub.venue }} ({{ pub.date | date: "%Y" }})</div>{% endif %}
+    {% if pub.excerpt %}<div class="pub-excerpt">{{ pub.excerpt }}</div>{% endif %}
+    {% if pub.paperurl %}
+    <div class="pub-links">
+      <a href="{{ pub.paperurl }}" target="_blank">Read Online</a>
+    </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+</details>
+{% endif %}
+
+{% if monographs.size > 0 %}
+<details>
+  <summary>🎓 Monographs & Theses ({{ monographs.size }})</summary>
+  {% for pub in monographs %}
+  <div class="pub-item">
+    <div class="pub-title">{{ pub.title }}</div>
+    {% if pub.authors %}<div class="pub-authors">{{ pub.authors }}</div>{% endif %}
+    {% if pub.venue %}<div class="pub-venue">{{ pub.venue }} ({{ pub.date | date: "%Y" }})</div>{% endif %}
+    {% if pub.excerpt %}<div class="pub-excerpt">{{ pub.excerpt }}</div>{% endif %}
+    {% if pub.paperurl %}
+    <div class="pub-links">
+      <a href="{{ pub.paperurl }}" target="_blank">Read Online</a>
+    </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+</details>
+{% endif %}
+
+{% if posters.size > 0 %}
+<details>
+  <summary>🖼️ Posters ({{ posters.size }})</summary>
+  {% for pub in posters %}
+  <div class="pub-item">
+    <div class="pub-title">{{ pub.title }}</div>
+    {% if pub.authors %}<div class="pub-authors">{{ pub.authors }}</div>{% endif %}
+    {% if pub.venue %}<div class="pub-venue">{{ pub.venue }} ({{ pub.date | date: "%Y" }})</div>{% endif %}
+    {% if pub.excerpt %}<div class="pub-excerpt">{{ pub.excerpt }}</div>{% endif %}
+    {% if pub.paperurl %}
+    <div class="pub-links">
+      <a href="{{ pub.paperurl }}" target="_blank">View Poster</a>
+    </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+</details>
+{% endif %}
+
+{% if popular.size > 0 %}
+<details>
+  <summary>🌟 Popular Science ({{ popular.size }})</summary>
+  {% for pub in popular %}
+  <div class="pub-item">
+    <div class="pub-title">{{ pub.title }}</div>
+    {% if pub.authors %}<div class="pub-authors">{{ pub.authors }}</div>{% endif %}
+    {% if pub.venue %}<div class="pub-venue">{{ pub.venue }} ({{ pub.date | date: "%Y" }})</div>{% endif %}
+    {% if pub.excerpt %}<div class="pub-excerpt">{{ pub.excerpt }}</div>{% endif %}
+    {% if pub.paperurl %}
+    <div class="pub-links">
+      <a href="{{ pub.paperurl }}" target="_blank">Read Online</a>
+    </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+</details>
+{% endif %}
