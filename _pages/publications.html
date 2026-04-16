@@ -6,171 +6,605 @@ author_profile: true
 ---
 
 <style>
-  details {
-    margin: 20px 0;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+  /* ── Dirt-theme palette ────────────────────────────────────────────── */
+  :root {
+    --pub-bg          : #f3f3f3;
+    --pub-bg-mid      : #ece9e0;
+    --pub-bg-item     : #e9e6dc;
+    --pub-border      : #e9dcbe;
+    --pub-border-dark : #c9b98a;
+    --pub-accent      : #b49368;
+    --pub-text        : #343434;
+    --pub-text-muted  : #8e8b82;
   }
-  
-  details summary {
+
+  /* ── Category-level (outermost) ───────────────────────────────────── */
+  .pub-category {
+    margin: 1.4em 0;
+    border: 1px solid var(--pub-border-dark);
+    border-radius: 4px;
+    background: var(--pub-bg);
+    overflow: hidden;
+  }
+  .pub-category > summary {
     cursor: pointer;
-    font-weight: bold;
-    font-size: 1.1em;
-    padding: 10px 0;
-    user-select: none;
-  }
-  
-  details summary:hover {
-    color: #0066cc;
-  }
-  
-  details[open] summary {
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .pub-item {
-    margin: 15px 0;
-    padding: 10px;
-    border-left: 3px solid #0066cc;
-    background-color: white;
-  }
-  
-  .pub-title {
-    font-weight: bold;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.75em 1em;
     font-size: 1.05em;
-    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--pub-text);
+    background: var(--pub-bg);
+    border-bottom: 1px solid transparent;
+    user-select: none;
+    transition: background 0.15s;
   }
-  
-  .pub-authors {
+  .pub-category > summary::-webkit-details-marker { display: none; }
+  .pub-category > summary::before {
+    content: "▶";
+    font-size: 0.7em;
+    transition: transform 0.2s;
+    color: var(--pub-accent);
+    display: inline-block;
+  }
+  .pub-category[open] > summary::before { transform: rotate(90deg); }
+  .pub-category[open] > summary {
+    border-bottom-color: var(--pub-border);
+    background: var(--pub-bg-mid);
+  }
+  .pub-category > summary:hover { background: var(--pub-bg-mid); }
+
+  .pub-category-body {
+    padding: 0.75em 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+  }
+
+  /* ── Author-position sub-headers ──────────────────────────────────── */
+  .pub-role {
+    border: 1px solid var(--pub-border);
+    border-radius: 3px;
+    background: var(--pub-bg-mid);
+    overflow: hidden;
+  }
+  .pub-role > summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.5em 0.85em;
     font-size: 0.95em;
-    color: #555;
-    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--pub-text);
+    user-select: none;
+    border-bottom: 1px solid transparent;
+    transition: background 0.15s;
   }
-  
-  .pub-venue {
+  .pub-role > summary::-webkit-details-marker { display: none; }
+  .pub-role > summary::before {
+    content: "▶";
+    font-size: 0.65em;
+    transition: transform 0.2s;
+    color: var(--pub-text-muted);
+    display: inline-block;
+  }
+  .pub-role[open] > summary::before { transform: rotate(90deg); }
+  .pub-role[open] > summary { border-bottom-color: var(--pub-border); }
+  .pub-role > summary:hover { background: var(--pub-bg-item); }
+
+  .pub-role-body {
+    padding: 0.6em 0.85em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  /* ── Individual publication entries ───────────────────────────────── */
+  .pub-entry {
+    border-left: 3px solid var(--pub-accent);
+    background: var(--pub-bg-item);
+    border-radius: 0 3px 3px 0;
+    overflow: hidden;
+  }
+  .pub-entry > summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 0.6em 0.8em;
+    user-select: none;
+    display: grid;
+    grid-template-areas:
+      "title title"
+      "authors venue";
+    grid-template-columns: 1fr auto;
+    gap: 0.15em 0.5em;
+    align-items: baseline;
+  }
+  .pub-entry > summary::-webkit-details-marker { display: none; }
+  .pub-entry > summary:hover { background: rgba(0,0,0,0.04); }
+
+  .pub-entry-title {
+    grid-area: title;
+    font-weight: 600;
+    font-size: 0.95em;
+    color: var(--pub-text);
+    line-height: 1.35;
+  }
+  .pub-entry-title::before {
+    content: "▶";
+    font-size: 0.6em;
+    color: var(--pub-accent);
+    transition: transform 0.2s;
+    display: inline-block;
+    margin-right: 0.4em;
+    vertical-align: middle;
+  }
+  .pub-entry[open] > summary .pub-entry-title::before {
+    transform: rotate(90deg);
+  }
+  .pub-entry-authors {
+    grid-area: authors;
+    font-size: 0.82em;
+    color: var(--pub-text-muted);
+  }
+  .pub-entry-venue {
+    grid-area: venue;
+    font-size: 0.82em;
     font-style: italic;
-    color: #666;
-    margin-bottom: 5px;
+    color: var(--pub-text-muted);
+    text-align: right;
+    white-space: nowrap;
   }
-  
-  .pub-links {
-    margin-top: 8px;
+
+  /* ── Expanded body ────────────────────────────────────────────────── */
+  .pub-entry-body {
+    padding: 0.6em 0.85em 0.85em;
+    border-top: 1px solid var(--pub-border);
+    font-size: 0.88em;
+    color: var(--pub-text);
   }
-  
+  .pub-abstract {
+    line-height: 1.6;
+    margin-bottom: 0.65em;
+    color: var(--pub-text-muted);
+  }
   .pub-links a {
-    margin-right: 10px;
-    color: #0066cc;
+    display: inline-block;
+    margin-right: 0.75em;
+    color: var(--pub-text);
+    font-weight: 600;
     text-decoration: none;
+    border-bottom: 1px solid var(--pub-accent);
+    padding-bottom: 1px;
+    transition: color 0.15s, border-color 0.15s;
   }
-  
   .pub-links a:hover {
-    text-decoration: underline;
+    color: var(--pub-accent);
+  }
+
+  .pub-count {
+    font-size: 0.78em;
+    font-weight: normal;
+    color: var(--pub-text-muted);
+    margin-left: 0.3em;
   }
 </style>
 
+{% comment %}─── Collect and sort all publications ───{% endcomment %}
 {% assign publications = site.publications | sort: 'date' | reverse %}
 
-{% assign books = publications | where: 'category', 'book' %}
-{% assign journals = publications | where: 'category', 'journal' %}
-{% assign monographs = publications | where: 'category', 'monograph' %}
-{% assign posters = publications | where: 'category', 'poster' %}
-{% assign popular = publications | where: 'category', 'popular_science' %}
+{% comment %}─── Split by category ───{% endcomment %}
+{% assign cat_books       = publications | where: 'category', 'books' %}
+{% assign cat_manuscripts = publications | where: 'category', 'manuscripts' %}
+{% assign cat_conferences = publications | where: 'category', 'conferences' %}
+{% assign cat_fiction     = publications | where: 'category', 'fiction' %}
+{% assign cat_other       = publications | where: 'category', 'other' %}
 
-{% if books.size > 0 %}
-<details>
-  <summary>📚 Books ({{ books.size }})</summary>
-  {% for pub in books %}
-  <div class="pub-item">
-    <div class="pub-title">{{ pub.title }}</div>
-    {% if pub.authors %}<div class="pub-authors">{{ pub.authors }}</div>{% endif %}
-    {% if pub.venue %}<div class="pub-venue">{{ pub.venue }} ({{ pub.date | date: "%Y" }})</div>{% endif %}
-    {% if pub.excerpt %}<div class="pub-excerpt">{{ pub.excerpt }}</div>{% endif %}
-    {% if pub.paperurl %}
-    <div class="pub-links">
-      <a href="{{ pub.paperurl }}" target="_blank">Read Online</a>
-    </div>
+{% comment %}─── Helper macro: render role sub-sections for a given pub list ───
+   Called inline for each category below.
+{% endcomment %}
+
+{% comment %}──────────────────────────────────────────────────────────────────
+  BOOKS
+──────────────────────────────────────────────────────────────────{% endcomment %}
+{% if cat_books.size > 0 %}
+<details class="pub-category">
+  <summary>📚 Books <span class="pub-count">({{ cat_books.size }})</span></summary>
+  <div class="pub-category-body">
+    {% assign role_pubs = cat_books | where: 'author_position', 'first' %}
+    {% if role_pubs.size > 0 %}
+    <details class="pub-role" open>
+      <summary>First Author <span class="pub-count">({{ role_pubs.size }})</span></summary>
+      <div class="pub-role-body">
+        {% for pub in role_pubs %}<details class="pub-entry">
+          <summary>
+            <span class="pub-entry-title">{{ pub.title }}</span>
+            <span class="pub-entry-authors">{{ pub.authors }}</span>
+            <span class="pub-entry-venue">{{ pub.venue }}{% if pub.date %} · {{ pub.date | date: "%Y" }}{% endif %}</span>
+          </summary>
+          <div class="pub-entry-body">
+            {% if pub.excerpt %}<p class="pub-abstract">{{ pub.excerpt }}</p>{% endif %}
+            {% if pub.paperurl %}<div class="pub-links"><a href="{{ pub.paperurl }}" target="_blank" rel="noopener">Read / View Online ↗</a></div>{% endif %}
+          </div>
+        </details>{% endfor %}
+      </div>
+    </details>
+    {% endif %}
+    {% assign role_pubs = cat_books | where: 'author_position', 'co' %}
+    {% if role_pubs.size > 0 %}
+    <details class="pub-role" open>
+      <summary>Co-Author <span class="pub-count">({{ role_pubs.size }})</span></summary>
+      <div class="pub-role-body">
+        {% for pub in role_pubs %}<details class="pub-entry">
+          <summary>
+            <span class="pub-entry-title">{{ pub.title }}</span>
+            <span class="pub-entry-authors">{{ pub.authors }}</span>
+            <span class="pub-entry-venue">{{ pub.venue }}{% if pub.date %} · {{ pub.date | date: "%Y" }}{% endif %}</span>
+          </summary>
+          <div class="pub-entry-body">
+            {% if pub.excerpt %}<p class="pub-abstract">{{ pub.excerpt }}</p>{% endif %}
+            {% if pub.paperurl %}<div class="pub-links"><a href="{{ pub.paperurl }}" target="_blank" rel="noopener">Read / View Online ↗</a></div>{% endif %}
+          </div>
+        </details>{% endfor %}
+      </div>
+    </details>
+    {% endif %}
+    {% assign role_pubs = cat_books | where: 'author_position', 'senior' %}
+    {% if role_pubs.size > 0 %}
+    <details class="pub-role" open>
+      <summary>Senior Author <span class="pub-count">({{ role_pubs.size }})</span></summary>
+      <div class="pub-role-body">
+        {% for pub in role_pubs %}<details class="pub-entry">
+          <summary>
+            <span class="pub-entry-title">{{ pub.title }}</span>
+            <span class="pub-entry-authors">{{ pub.authors }}</span>
+            <span class="pub-entry-venue">{{ pub.venue }}{% if pub.date %} · {{ pub.date | date: "%Y" }}{% endif %}</span>
+          </summary>
+          <div class="pub-entry-body">
+            {% if pub.excerpt %}<p class="pub-abstract">{{ pub.excerpt }}</p>{% endif %}
+            {% if pub.paperurl %}<div class="pub-links"><a href="{{ pub.paperurl }}" target="_blank" rel="noopener">Read / View Online ↗</a></div>{% endif %}
+          </div>
+        </details>{% endfor %}
+      </div>
+    </details>
+    {% endif %}
+    {% assign role_pubs_other = "" | split: "" %}
+    {% for p in cat_books %}{% unless p.author_position %}{% assign role_pubs_other = role_pubs_other | push: p %}{% endunless %}{% endfor %}
+    {% if role_pubs_other.size > 0 %}
+    <details class="pub-role" open>
+      <summary>Other <span class="pub-count">({{ role_pubs_other.size }})</span></summary>
+      <div class="pub-role-body">
+        {% for pub in role_pubs_other %}<details class="pub-entry">
+          <summary>
+            <span class="pub-entry-title">{{ pub.title }}</span>
+            <span class="pub-entry-authors">{{ pub.authors }}</span>
+            <span class="pub-entry-venue">{{ pub.venue }}{% if pub.date %} · {{ pub.date | date: "%Y" }}{% endif %}</span>
+          </summary>
+          <div class="pub-entry-body">
+            {% if pub.excerpt %}<p class="pub-abstract">{{ pub.excerpt }}</p>{% endif %}
+            {% if pub.paperurl %}<div class="pub-links"><a href="{{ pub.paperurl }}" target="_blank" rel="noopener">Read / View Online ↗</a></div>{% endif %}
+          </div>
+        </details>{% endfor %}
+      </div>
+    </details>
     {% endif %}
   </div>
-  {% endfor %}
 </details>
 {% endif %}
 
-{% if journals.size > 0 %}
-<details>
-  <summary>📄 Journal Articles ({{ journals.size }})</summary>
-  {% for pub in journals %}
-  <div class="pub-item">
-    <div class="pub-title">{{ pub.title }}</div>
-    {% if pub.authors %}<div class="pub-authors">{{ pub.authors }}</div>{% endif %}
-    {% if pub.venue %}<div class="pub-venue">{{ pub.venue }} ({{ pub.date | date: "%Y" }})</div>{% endif %}
-    {% if pub.excerpt %}<div class="pub-excerpt">{{ pub.excerpt }}</div>{% endif %}
-    {% if pub.paperurl %}
-    <div class="pub-links">
-      <a href="{{ pub.paperurl }}" target="_blank">Read Online</a>
-    </div>
+{% comment %}──────────────────────────────────────────────────────────────────
+  JOURNAL ARTICLES
+──────────────────────────────────────────────────────────────────{% endcomment %}
+{% if cat_manuscripts.size > 0 %}
+<details class="pub-category" open>
+  <summary>📄 Journal Articles <span class="pub-count">({{ cat_manuscripts.size }})</span></summary>
+  <div class="pub-category-body">
+    {% assign role_pubs = cat_manuscripts | where: 'author_position', 'first' %}
+    {% if role_pubs.size > 0 %}
+    <details class="pub-role" open>
+      <summary>First Author <span class="pub-count">({{ role_pubs.size }})</span></summary>
+      <div class="pub-role-body">
+        {% for pub in role_pubs %}<details class="pub-entry">
+          <summary>
+            <span class="pub-entry-title">{{ pub.title }}</span>
+            <span class="pub-entry-authors">{{ pub.authors }}</span>
+            <span class="pub-entry-venue">{{ pub.venue }}{% if pub.date %} · {{ pub.date | date: "%Y" }}{% endif %}</span>
+          </summary>
+          <div class="pub-entry-body">
+            {% if pub.excerpt %}<p class="pub-abstract">{{ pub.excerpt }}</p>{% endif %}
+            {% if pub.paperurl %}<div class="pub-links"><a href="{{ pub.paperurl }}" target="_blank" rel="noopener">Read / View Online ↗</a></div>{% endif %}
+          </div>
+        </details>{% endfor %}
+      </div>
+    </details>
+    {% endif %}
+    {% assign role_pubs = cat_manuscripts | where: 'author_position', 'co' %}
+    {% if role_pubs.size > 0 %}
+    <details class="pub-role" open>
+      <summary>Co-Author <span class="pub-count">({{ role_pubs.size }})</span></summary>
+      <div class="pub-role-body">
+        {% for pub in role_pubs %}<details class="pub-entry">
+          <summary>
+            <span class="pub-entry-title">{{ pub.title }}</span>
+            <span class="pub-entry-authors">{{ pub.authors }}</span>
+            <span class="pub-entry-venue">{{ pub.venue }}{% if pub.date %} · {{ pub.date | date: "%Y" }}{% endif %}</span>
+          </summary>
+          <div class="pub-entry-body">
+            {% if pub.excerpt %}<p class="pub-abstract">{{ pub.excerpt }}</p>{% endif %}
+            {% if pub.paperurl %}<div class="pub-links"><a href="{{ pub.paperurl }}" target="_blank" rel="noopener">Read / View Online ↗</a></div>{% endif %}
+          </div>
+        </details>{% endfor %}
+      </div>
+    </details>
+    {% endif %}
+    {% assign role_pubs = cat_manuscripts | where: 'author_position', 'senior' %}
+    {% if role_pubs.size > 0 %}
+    <details class="pub-role" open>
+      <summary>Senior Author <span class="pub-count">({{ role_pubs.size }})</span></summary>
+      <div class="pub-role-body">
+        {% for pub in role_pubs %}<details class="pub-entry">
+          <summary>
+            <span class="pub-entry-title">{{ pub.title }}</span>
+            <span class="pub-entry-authors">{{ pub.authors }}</span>
+            <span class="pub-entry-venue">{{ pub.venue }}{% if pub.date %} · {{ pub.date | date: "%Y" }}{% endif %}</span>
+          </summary>
+          <div class="pub-entry-body">
+            {% if pub.excerpt %}<p class="pub-abstract">{{ pub.excerpt }}</p>{% endif %}
+            {% if pub.paperurl %}<div class="pub-links"><a href="{{ pub.paperurl }}" target="_blank" rel="noopener">Read / View Online ↗</a></div>{% endif %}
+          </div>
+        </details>{% endfor %}
+      </div>
+    </details>
+    {% endif %}
+    {% assign role_pubs_other = "" | split: "" %}
+    {% for p in cat_manuscripts %}{% unless p.author_position %}{% assign role_pubs_other = role_pubs_other | push: p %}{% endunless %}{% endfor %}
+    {% if role_pubs_other.size > 0 %}
+    <details class="pub-role" open>
+      <summary>Other <span class="pub-count">({{ role_pubs_other.size }})</span></summary>
+      <div class="pub-role-body">
+        {% for pub in role_pubs_other %}<details class="pub-entry">
+          <summary>
+            <span class="pub-entry-title">{{ pub.title }}</span>
+            <span class="pub-entry-authors">{{ pub.authors }}</span>
+            <span class="pub-entry-venue">{{ pub.venue }}{% if pub.date %} · {{ pub.date | date: "%Y" }}{% endif %}</span>
+          </summary>
+          <div class="pub-entry-body">
+            {% if pub.excerpt %}<p class="pub-abstract">{{ pub.excerpt }}</p>{% endif %}
+            {% if pub.paperurl %}<div class="pub-links"><a href="{{ pub.paperurl }}" target="_blank" rel="noopener">Read / View Online ↗</a></div>{% endif %}
+          </div>
+        </details>{% endfor %}
+      </div>
+    </details>
     {% endif %}
   </div>
-  {% endfor %}
 </details>
 {% endif %}
 
-{% if monographs.size > 0 %}
-<details>
-  <summary>🎓 Monographs & Theses ({{ monographs.size }})</summary>
-  {% for pub in monographs %}
-  <div class="pub-item">
-    <div class="pub-title">{{ pub.title }}</div>
-    {% if pub.authors %}<div class="pub-authors">{{ pub.authors }}</div>{% endif %}
-    {% if pub.venue %}<div class="pub-venue">{{ pub.venue }} ({{ pub.date | date: "%Y" }})</div>{% endif %}
-    {% if pub.excerpt %}<div class="pub-excerpt">{{ pub.excerpt }}</div>{% endif %}
-    {% if pub.paperurl %}
-    <div class="pub-links">
-      <a href="{{ pub.paperurl }}" target="_blank">Read Online</a>
-    </div>
+{% comment %}──────────────────────────────────────────────────────────────────
+  CONFERENCE POSTERS
+──────────────────────────────────────────────────────────────────{% endcomment %}
+{% if cat_conferences.size > 0 %}
+<details class="pub-category">
+  <summary>🖼️ Conference Posters <span class="pub-count">({{ cat_conferences.size }})</span></summary>
+  <div class="pub-category-body">
+    {% assign role_pubs = cat_conferences | where: 'author_position', 'first' %}
+    {% if role_pubs.size > 0 %}
+    <details class="pub-role" open>
+      <summary>First Author <span class="pub-count">({{ role_pubs.size }})</span></summary>
+      <div class="pub-role-body">
+        {% for pub in role_pubs %}<details class="pub-entry">
+          <summary>
+            <span class="pub-entry-title">{{ pub.title }}</span>
+            <span class="pub-entry-authors">{{ pub.authors }}</span>
+            <span class="pub-entry-venue">{{ pub.venue }}{% if pub.date %} · {{ pub.date | date: "%Y" }}{% endif %}</span>
+          </summary>
+          <div class="pub-entry-body">
+            {% if pub.excerpt %}<p class="pub-abstract">{{ pub.excerpt }}</p>{% endif %}
+            {% if pub.paperurl %}<div class="pub-links"><a href="{{ pub.paperurl }}" target="_blank" rel="noopener">View Poster ↗</a></div>{% endif %}
+          </div>
+        </details>{% endfor %}
+      </div>
+    </details>
+    {% endif %}
+    {% assign role_pubs = cat_conferences | where: 'author_position', 'co' %}
+    {% if role_pubs.size > 0 %}
+    <details class="pub-role" open>
+      <summary>Co-Author <span class="pub-count">({{ role_pubs.size }})</span></summary>
+      <div class="pub-role-body">
+        {% for pub in role_pubs %}<details class="pub-entry">
+          <summary>
+            <span class="pub-entry-title">{{ pub.title }}</span>
+            <span class="pub-entry-authors">{{ pub.authors }}</span>
+            <span class="pub-entry-venue">{{ pub.venue }}{% if pub.date %} · {{ pub.date | date: "%Y" }}{% endif %}</span>
+          </summary>
+          <div class="pub-entry-body">
+            {% if pub.excerpt %}<p class="pub-abstract">{{ pub.excerpt }}</p>{% endif %}
+            {% if pub.paperurl %}<div class="pub-links"><a href="{{ pub.paperurl }}" target="_blank" rel="noopener">View Poster ↗</a></div>{% endif %}
+          </div>
+        </details>{% endfor %}
+      </div>
+    </details>
+    {% endif %}
+    {% assign role_pubs = cat_conferences | where: 'author_position', 'senior' %}
+    {% if role_pubs.size > 0 %}
+    <details class="pub-role" open>
+      <summary>Senior Author <span class="pub-count">({{ role_pubs.size }})</span></summary>
+      <div class="pub-role-body">
+        {% for pub in role_pubs %}<details class="pub-entry">
+          <summary>
+            <span class="pub-entry-title">{{ pub.title }}</span>
+            <span class="pub-entry-authors">{{ pub.authors }}</span>
+            <span class="pub-entry-venue">{{ pub.venue }}{% if pub.date %} · {{ pub.date | date: "%Y" }}{% endif %}</span>
+          </summary>
+          <div class="pub-entry-body">
+            {% if pub.excerpt %}<p class="pub-abstract">{{ pub.excerpt }}</p>{% endif %}
+            {% if pub.paperurl %}<div class="pub-links"><a href="{{ pub.paperurl }}" target="_blank" rel="noopener">View Poster ↗</a></div>{% endif %}
+          </div>
+        </details>{% endfor %}
+      </div>
+    </details>
+    {% endif %}
+    {% assign role_pubs_other = "" | split: "" %}
+    {% for p in cat_conferences %}{% unless p.author_position %}{% assign role_pubs_other = role_pubs_other | push: p %}{% endunless %}{% endfor %}
+    {% if role_pubs_other.size > 0 %}
+    <details class="pub-role" open>
+      <summary>Other <span class="pub-count">({{ role_pubs_other.size }})</span></summary>
+      <div class="pub-role-body">
+        {% for pub in role_pubs_other %}<details class="pub-entry">
+          <summary>
+            <span class="pub-entry-title">{{ pub.title }}</span>
+            <span class="pub-entry-authors">{{ pub.authors }}</span>
+            <span class="pub-entry-venue">{{ pub.venue }}{% if pub.date %} · {{ pub.date | date: "%Y" }}{% endif %}</span>
+          </summary>
+          <div class="pub-entry-body">
+            {% if pub.excerpt %}<p class="pub-abstract">{{ pub.excerpt }}</p>{% endif %}
+            {% if pub.paperurl %}<div class="pub-links"><a href="{{ pub.paperurl }}" target="_blank" rel="noopener">View Poster ↗</a></div>{% endif %}
+          </div>
+        </details>{% endfor %}
+      </div>
+    </details>
     {% endif %}
   </div>
-  {% endfor %}
 </details>
 {% endif %}
 
-{% if posters.size > 0 %}
-<details>
-  <summary>🖼️ Posters ({{ posters.size }})</summary>
-  {% for pub in posters %}
-  <div class="pub-item">
-    <div class="pub-title">{{ pub.title }}</div>
-    {% if pub.authors %}<div class="pub-authors">{{ pub.authors }}</div>{% endif %}
-    {% if pub.venue %}<div class="pub-venue">{{ pub.venue }} ({{ pub.date | date: "%Y" }})</div>{% endif %}
-    {% if pub.excerpt %}<div class="pub-excerpt">{{ pub.excerpt }}</div>{% endif %}
-    {% if pub.paperurl %}
-    <div class="pub-links">
-      <a href="{{ pub.paperurl }}" target="_blank">View Poster</a>
-    </div>
+{% comment %}──────────────────────────────────────────────────────────────────
+  FICTION
+──────────────────────────────────────────────────────────────────{% endcomment %}
+{% if cat_fiction.size > 0 %}
+<details class="pub-category">
+  <summary>✍️ Fiction <span class="pub-count">({{ cat_fiction.size }})</span></summary>
+  <div class="pub-category-body">
+    {% assign role_pubs = cat_fiction | where: 'author_position', 'first' %}
+    {% if role_pubs.size > 0 %}
+    <details class="pub-role" open>
+      <summary>First Author <span class="pub-count">({{ role_pubs.size }})</span></summary>
+      <div class="pub-role-body">
+        {% for pub in role_pubs %}<details class="pub-entry">
+          <summary>
+            <span class="pub-entry-title">{{ pub.title }}</span>
+            <span class="pub-entry-authors">{{ pub.authors }}</span>
+            <span class="pub-entry-venue">{{ pub.venue }}{% if pub.date %} · {{ pub.date | date: "%Y" }}{% endif %}</span>
+          </summary>
+          <div class="pub-entry-body">
+            {% if pub.excerpt %}<p class="pub-abstract">{{ pub.excerpt }}</p>{% endif %}
+            {% if pub.paperurl %}<div class="pub-links"><a href="{{ pub.paperurl }}" target="_blank" rel="noopener">Read Online ↗</a></div>{% endif %}
+          </div>
+        </details>{% endfor %}
+      </div>
+    </details>
+    {% endif %}
+    {% assign role_pubs_other = "" | split: "" %}
+    {% for p in cat_fiction %}{% unless p.author_position %}{% assign role_pubs_other = role_pubs_other | push: p %}{% endunless %}{% endfor %}
+    {% if role_pubs_other.size > 0 %}
+    <details class="pub-role" open>
+      <summary>Other <span class="pub-count">({{ role_pubs_other.size }})</span></summary>
+      <div class="pub-role-body">
+        {% for pub in role_pubs_other %}<details class="pub-entry">
+          <summary>
+            <span class="pub-entry-title">{{ pub.title }}</span>
+            <span class="pub-entry-authors">{{ pub.authors }}</span>
+            <span class="pub-entry-venue">{{ pub.venue }}{% if pub.date %} · {{ pub.date | date: "%Y" }}{% endif %}</span>
+          </summary>
+          <div class="pub-entry-body">
+            {% if pub.excerpt %}<p class="pub-abstract">{{ pub.excerpt }}</p>{% endif %}
+            {% if pub.paperurl %}<div class="pub-links"><a href="{{ pub.paperurl }}" target="_blank" rel="noopener">Read Online ↗</a></div>{% endif %}
+          </div>
+        </details>{% endfor %}
+      </div>
+    </details>
     {% endif %}
   </div>
-  {% endfor %}
 </details>
 {% endif %}
 
-{% if popular.size > 0 %}
-<details>
-  <summary>🌟 Popular Science ({{ popular.size }})</summary>
-  {% for pub in popular %}
-  <div class="pub-item">
-    <div class="pub-title">{{ pub.title }}</div>
-    {% if pub.authors %}<div class="pub-authors">{{ pub.authors }}</div>{% endif %}
-    {% if pub.venue %}<div class="pub-venue">{{ pub.venue }} ({{ pub.date | date: "%Y" }})</div>{% endif %}
-    {% if pub.excerpt %}<div class="pub-excerpt">{{ pub.excerpt }}</div>{% endif %}
-    {% if pub.paperurl %}
-    <div class="pub-links">
-      <a href="{{ pub.paperurl }}" target="_blank">Read Online</a>
-    </div>
+{% comment %}──────────────────────────────────────────────────────────────────
+  OTHER (theses, reviews, etc.)
+──────────────────────────────────────────────────────────────────{% endcomment %}
+{% if cat_other.size > 0 %}
+<details class="pub-category">
+  <summary>🎓 Other <span class="pub-count">({{ cat_other.size }})</span></summary>
+  <div class="pub-category-body">
+    {% assign role_pubs = cat_other | where: 'author_position', 'first' %}
+    {% if role_pubs.size > 0 %}
+    <details class="pub-role" open>
+      <summary>First Author <span class="pub-count">({{ role_pubs.size }})</span></summary>
+      <div class="pub-role-body">
+        {% for pub in role_pubs %}<details class="pub-entry">
+          <summary>
+            <span class="pub-entry-title">{{ pub.title }}</span>
+            <span class="pub-entry-authors">{{ pub.authors }}</span>
+            <span class="pub-entry-venue">{{ pub.venue }}{% if pub.date %} · {{ pub.date | date: "%Y" }}{% endif %}</span>
+          </summary>
+          <div class="pub-entry-body">
+            {% if pub.excerpt %}<p class="pub-abstract">{{ pub.excerpt }}</p>{% endif %}
+            {% if pub.paperurl %}<div class="pub-links"><a href="{{ pub.paperurl }}" target="_blank" rel="noopener">Read / View Online ↗</a></div>{% endif %}
+          </div>
+        </details>{% endfor %}
+      </div>
+    </details>
+    {% endif %}
+    {% assign role_pubs = cat_other | where: 'author_position', 'co' %}
+    {% if role_pubs.size > 0 %}
+    <details class="pub-role" open>
+      <summary>Co-Author <span class="pub-count">({{ role_pubs.size }})</span></summary>
+      <div class="pub-role-body">
+        {% for pub in role_pubs %}<details class="pub-entry">
+          <summary>
+            <span class="pub-entry-title">{{ pub.title }}</span>
+            <span class="pub-entry-authors">{{ pub.authors }}</span>
+            <span class="pub-entry-venue">{{ pub.venue }}{% if pub.date %} · {{ pub.date | date: "%Y" }}{% endif %}</span>
+          </summary>
+          <div class="pub-entry-body">
+            {% if pub.excerpt %}<p class="pub-abstract">{{ pub.excerpt }}</p>{% endif %}
+            {% if pub.paperurl %}<div class="pub-links"><a href="{{ pub.paperurl }}" target="_blank" rel="noopener">Read / View Online ↗</a></div>{% endif %}
+          </div>
+        </details>{% endfor %}
+      </div>
+    </details>
+    {% endif %}
+    {% assign role_pubs = cat_other | where: 'author_position', 'senior' %}
+    {% if role_pubs.size > 0 %}
+    <details class="pub-role" open>
+      <summary>Senior Author <span class="pub-count">({{ role_pubs.size }})</span></summary>
+      <div class="pub-role-body">
+        {% for pub in role_pubs %}<details class="pub-entry">
+          <summary>
+            <span class="pub-entry-title">{{ pub.title }}</span>
+            <span class="pub-entry-authors">{{ pub.authors }}</span>
+            <span class="pub-entry-venue">{{ pub.venue }}{% if pub.date %} · {{ pub.date | date: "%Y" }}{% endif %}</span>
+          </summary>
+          <div class="pub-entry-body">
+            {% if pub.excerpt %}<p class="pub-abstract">{{ pub.excerpt }}</p>{% endif %}
+            {% if pub.paperurl %}<div class="pub-links"><a href="{{ pub.paperurl }}" target="_blank" rel="noopener">Read / View Online ↗</a></div>{% endif %}
+          </div>
+        </details>{% endfor %}
+      </div>
+    </details>
+    {% endif %}
+    {% assign role_pubs_other = "" | split: "" %}
+    {% for p in cat_other %}{% unless p.author_position %}{% assign role_pubs_other = role_pubs_other | push: p %}{% endunless %}{% endfor %}
+    {% if role_pubs_other.size > 0 %}
+    <details class="pub-role" open>
+      <summary>Other <span class="pub-count">({{ role_pubs_other.size }})</span></summary>
+      <div class="pub-role-body">
+        {% for pub in role_pubs_other %}<details class="pub-entry">
+          <summary>
+            <span class="pub-entry-title">{{ pub.title }}</span>
+            <span class="pub-entry-authors">{{ pub.authors }}</span>
+            <span class="pub-entry-venue">{{ pub.venue }}{% if pub.date %} · {{ pub.date | date: "%Y" }}{% endif %}</span>
+          </summary>
+          <div class="pub-entry-body">
+            {% if pub.excerpt %}<p class="pub-abstract">{{ pub.excerpt }}</p>{% endif %}
+            {% if pub.paperurl %}<div class="pub-links"><a href="{{ pub.paperurl }}" target="_blank" rel="noopener">Read / View Online ↗</a></div>{% endif %}
+          </div>
+        </details>{% endfor %}
+      </div>
+    </details>
     {% endif %}
   </div>
-  {% endfor %}
 </details>
 {% endif %}
