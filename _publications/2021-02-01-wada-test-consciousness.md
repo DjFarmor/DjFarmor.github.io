@@ -1,8 +1,8 @@
 ---
 title: "Changes in measures of consciousness during anaesthesia of one hemisphere (Wada test)"
 collection: publications
-category: journal
-author_role: co
+category: manuscripts
+author_position: co
 permalink: /publication/2021-wada-test-consciousness
 excerpt: "Using EEG from patients undergoing the Wada procedure—a clinical protocol that selectively anesthetizes one cerebral hemisphere—this study tests whether proposed consciousness measures detect the expected lateralized changes. Despite clear behavioral effects, signal diversity metrics showed no reliable hemisphere-specific differences, prompting discussion of cross-hemispheric confounds that may complicate consciousness measurement in neurological patients."
 date: 2021-02-01

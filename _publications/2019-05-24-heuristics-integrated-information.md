@@ -1,8 +1,8 @@
 ---
 title: "Evaluating Approximations and Heuristic Measures of Integrated Information"
 collection: publications
-category: journal
-author_role: first_and_senior
+category: manuscripts
+author_position: first
 permalink: /publication/2019-evaluating-approximations-integrated-information
 excerpt: "This study benchmarks computational approximations and heuristic proxies for integrated information (Φ), the central quantity in Integrated Information Theory (IIT). Testing 14 candidate measures across over 2,000 small synthetic networks, the authors show that while some approximations closely track true Φ at limited computational savings, popular heuristic measures correlate only with state-independent aspects of Φ—raising doubts about their validity for empirically testing IIT."
 date: 2019-05-24

@@ -1,8 +1,8 @@
 ---
 title: "Exploring effects of anesthesia on complexity, differentiation, and integrated information in rat EEG"
 collection: publications
-category: journal
-author_role: first
+category: manuscripts
+author_position: first
 permalink: /publication/2024-anesthesia-rat-eeg-complexity
 excerpt: "Extending human consciousness-measure methodology to rodents, this study compares perturbation-based and spontaneous EEG metrics under three anesthetics (propofol, sevoflurane, ketamine) in rats. While signal diversity measures behaved as predicted—suppressed by propofol and sevoflurane—integrated information metrics paradoxically increased under these same agents, suggesting that different measure families may be indexing distinct and potentially dissociable aspects of neural organization during anesthesia."
 date: 2024-05-16

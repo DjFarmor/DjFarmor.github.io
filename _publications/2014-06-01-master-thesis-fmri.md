@@ -1,7 +1,7 @@
 ---
 title: "Right Inferior Frontal Gyrus and Motor Response Inhibition: A Real-Time fMRI Neurofeedback Study"
 collection: publications
-category: monograph
+category: other
 permalink: /publication/2014-master-thesis-rifg-neurofeedback
 excerpt: "This master's thesis investigates the causal role of the right inferior frontal gyrus (rIFG) in voluntary motor inhibition using a real-time fMRI neurofeedback paradigm. Participants were trained to self-regulate rIFG activity, and the study examined whether this regulation influenced stop-signal task performance—contributing to ongoing debates about whether rIFG is causally necessary for response inhibition or merely co-activated alongside it."
 date: 2014-06-01

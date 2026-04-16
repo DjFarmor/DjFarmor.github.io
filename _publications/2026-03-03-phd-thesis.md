@@ -1,7 +1,7 @@
 ---
 title: "Consciousness When Is It Present and How Would We Know? Testing Measures and Assumptions for Detecting Consciousness Across States and Substrates"
 collection: publications
-category: monograph
+category: other
 permalink: /publication/2026-phd-thesis-consciousness
 excerpt: "This doctoral thesis critically examines the conceptual and empirical foundations of consciousness measurement. It investigates whether standard criteria for declaring a system unconscious are valid, whether proposed EEG-based measures are specific to conscious level rather than to confounding factors, and how results generalize across anesthesia, sleep, cognitive load, and animal models—situating the findings within broader theoretical debates in consciousness science."
 date: 2026-03-03

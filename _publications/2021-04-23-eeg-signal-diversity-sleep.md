@@ -1,8 +1,8 @@
 ---
 title: "EEG Signal Diversity Varies With Sleep Stage and Aspects of Dream Experience"
 collection: publications
-category: journal
-author_role: co
+category: manuscripts
+author_position: co
 permalink: /publication/2021-eeg-signal-diversity-sleep-dreams
 excerpt: "This study asks whether EEG signal diversity—proposed by several theories as a correlate of conscious richness—tracks both sleep depth and the vividness of dream experience. While diversity reliably decreased with sleep stage depth, it did not differentiate dreaming from non-dreaming awakenings within NREM2; a modest correlation emerged between posterior cortex complexity and the perceptual (versus thought-like) character of dream reports."
 date: 2021-04-23

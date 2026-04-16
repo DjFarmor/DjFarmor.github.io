@@ -8,90 +8,206 @@
 # EMPLOYMENT
 # ----------------------------------------------------------------
 employment:
-  - title: Position Title
-    institution: Institution Name
-    city: City
-    start: 2020
+  - title: Researcher
+    institution: Kongsberg Hospital
+    city: Kongsberg
+    start: 2025
     end: present
-    description: Brief description of role and responsibilities.
-  # - title: Previous Position
-  #   institution: Institution Name
-  #   city: City
-  #   start: 2017
-  #   end: 2020
-  #   description: Brief description.
+    description: >
+      Responsible for funding applications and data analysis.
+      PI: M.D. G. Ernst. Projects include a study on combination of
+      ketamine and TMS for depression, and memory formation and awareness
+      during propofol sedation.
+
+  - title: Researcher / PhD Candidate
+    institution: University of Oslo, Brain Signalling Group
+    city: Oslo
+    start: 2016
+    end: present
+    description: >
+      Researcher from 2016; PhD candidate from 2020 with supervisors
+      B. E. Juel & J. F. Storm (PI). PhD thesis defence: March 2026.
+      Responsible for all aspects of the scientific process — study design,
+      data acquisition, analysis, and writing. Projects span behavioural
+      and pharmacological experiments and modelling/simulation of large-scale
+      neural networks. Topics include anaesthesia, sleep, consciousness,
+      psychedelics, and computational modelling of thalamocortical systems.
+      Methods: TMS-EEG, ERP, anaesthesia administration, sleep deprivation,
+      behavioural paradigms.
+
+  - title: Researcher
+    institution: University of Oslo, Hedonic Pharmacology Lab
+    city: Oslo
+    start: 2016
+    end: 2016
+    description: >
+      PI: Prof. S. Leknes. Co-responsible for implementation and analysis;
+      assisted in acquisition. Study on binocular rivalry, salience, and
+      aggression using intranasal oxytocin administration, eyetracking,
+      and behavioural paradigms.
+
+  - title: Researcher
+    institution: Innlandet Hospital Trust
+    city: Hamar
+    start: 2015
+    end: 2016
+    description: >
+      PI: Assoc. Prof. T. Endestad. Main responsible for MRI, fMRI, and
+      resting-state fMRI analysis, interpretation, manuscript writing, and
+      submission. Psychological trauma study using MRI and fMRI.
+
+  - title: Scientific Technician
+    institution: University of Oslo
+    city: Oslo
+    start: 2014
+    end: 2016
+    description: >
+      Multiple concurrent roles: (1) Scientific Technician (Assoc. Prof. R. Huster)
+      — assisting in design, scripting, and implementation of multimodal EEG-fMRI
+      neurofeedback; behavioural inhibition study using real-time fMRI and EEG.
+      (2) Researcher (Hedonic Pharmacology Lab, PI: PhD S. Leknes) — consulting on
+      design, scripting, acquisition, and analysis; craving and reward study using
+      morphine administration, fMRI, rs-fMRI, biometrics, and behavioural paradigms.
+      (3) Scientific Assistant (NKVTS/UiO, PI: PhD I. Blix) — main responsible for
+      analysis; co-responsible for acquisition, interpretation, manuscript, and
+      submission; psychological trauma study using MRI, fMRI, rs-fMRI,
+      psychometrics, and behavioural paradigms.
+
+  - title: ERP-Technician
+    institution: Rikshospitalet (Oslo University Hospital)
+    city: Oslo
+    start: 2014
+    end: 2014
+    description: >
+      PI: Prof. S. Andersson. Responsible for EEG acquisition and ERP analysis
+      for diagnostic purposes.
+
+  - title: Researcher
+    institution: SafeeCom AS
+    city: Oslo
+    start: 2014
+    end: 2014
+    description: >
+      PI: Dr. B. C. Østberg. Main responsible for prototyping of medical
+      technologies — medical UWB radar scanner and vibrational diagnostic tool
+      using Matlab and Arduino.
+
+  - title: Lab Manager / Scientific Assistant
+    institution: University of Oslo, Cognitive Laboratories
+    city: Oslo
+    start: 2012
+    end: 2013
+    description: >
+      Lab manager (Assoc. Prof. T. Endestad): responsible for data acquisition,
+      student lab days, analysis, booking, and IT communication.
+      Scientific Assistant (PI: PhD I. Blix): co-responsible for fMRI/MRI
+      acquisition including recent traffic accident survivors; psychological
+      trauma study using MRI, fMRI, rs-fMRI, psychometrics, and behavioural
+      paradigms.
 
 # ----------------------------------------------------------------
 # EDUCATION
 # ----------------------------------------------------------------
 education:
   - degree: Ph.D.
-    field: Field of Study
-    institution: University Name
-    city: City
-    year: 2020
-    thesis: "Thesis title goes here"
-    supervisor: Supervisor Name
+    field: Medicine and Health Science
+    institution: University of Oslo
+    city: Oslo
+    year: 2026
+    thesis: "Consciousness: When Is It Present And How Would We Know? Testing Measures and Assumptions for Detecting Consciousness Across States and Substrates"
+    supervisor: "Prof. J. F. Storm, PhD. B. E. Juel, Prof. R. J. Huster"
+
   - degree: M.Sc.
-    field: Field of Study
-    institution: University Name
-    city: City
-    year: 2016
-    thesis: ""
-    supervisor: ""
-  - degree: B.Sc.
-    field: Field of Study
-    institution: University Name
-    city: City
+    field: Cognitive Neuroscience
+    institution: University of Oslo, Institute of Psychology
+    city: Oslo
     year: 2014
-    thesis: ""
-    supervisor: ""
+    thesis: "Right Inferior Frontal Gyrus and Motor Response Inhibition: A Real-Time fMRI Neurofeedback Study"
+    supervisor: "Prof. Tor Endestad & PhD. Dag Alnæs"
+
+  - degree: B.Sc.
+    field: Informatics, Language, Logic and Psychology
+    institution: University of Oslo, Institute of Informatics
+    city: Oslo
+    year: 2012
+    thesis: "The Link Between Numerical Time Estimates and Stored Temporal References"
+    supervisor: "PhD. Torleif Hallkjellsvik"
 
 # ----------------------------------------------------------------
 # GRANTS & STIPENDS
 # ----------------------------------------------------------------
 grants:
-  - title: Grant or Stipend Name
-    funder: Funding Agency
-    amount: 100000
+  - title: Grant for ~2 Post-Doctoral Positions
+    funder: Helse Sør-Øst
+    amount: 0
     currency: NOK
-    year: 2023
-    description: Brief description of the project funded.
-  # - title: Another Grant
-  #   funder: Funder Name
-  #   amount: 50000
-  #   currency: NOK
-  #   year: 2021
-  #   description: ""
+    year: 2025
+    description: >
+      Responsible for writing a successful grant application to Helse Sør-Øst
+      funding approximately 2 post-doctoral positions. Project on
+      memory formation and awareness during propofol sedation
+      (UiO & Kongsberg Hospital).
+
+  - title: NFFO Stipend — Consciousness Science Textbook
+    funder: Norsk faglitterær forfatter- og oversetterforening (NFFO)
+    amount: 0
+    currency: NOK
+    year: 2025
+    description: >
+      Stipend awarded for writing an introductory textbook on consciousness
+      science, aimed at a broad academic audience.
+
+  - title: NFR Summer Stipend (Master Thesis)
+    funder: Norges Forskningsråd (NFR)
+    amount: 0
+    currency: NOK
+    year: 2013
+    description: >
+      Main recipient of the Research Council of Norway's summer stipend
+      for outstanding master's thesis work.
 
 # ----------------------------------------------------------------
 # AWARDS & HONOURS
 # ----------------------------------------------------------------
 awards:
-  - title: Award Name
-    institution: Awarding Body
-    year: 2022
-    description: ""
-  # - title: Another Award
-  #   institution: Awarding Body
-  #   year: 2020
-  #   description: ""
+  - title: 3rd Place — Forsker Grand Prix (Local Final)
+    institution: Forsker Grand Prix / Forskningsdagene
+    year: 2025
+    description: >
+      Achieved 3rd place in the local final of Forsker Grand Prix,
+      Norway's national science communication competition.
 
 # ----------------------------------------------------------------
 # SERVICE / REVIEWS
 # ----------------------------------------------------------------
 reviews:
-  total_count: 0          # approximate total papers reviewed
+  total_count: 0          # approximate total; update when known
   journals:
-    - name: Journal Name A
+    - name: Nature Communications Biology
       count: 0
-    # - name: Journal Name B
-    #   count: 0
+    - name: Frontiers (multiple journals)
+      count: 0
+    - name: Cellular Physiology and Biochemistry
+      count: 0
+    - name: European Child & Adolescent Psychiatry
+      count: 0
+    - name: Journal of Psychedelic Studies
+      count: 0
+    - name: Clinical EEG and Neuroscience
+      count: 0
+    - name: NeuroImage
+      count: 0
 
 committees:
-  - name: Committee or Role Name
-    institution: Institution
-    year: 2023
+  - name: Guest Associate Editor
+    institution: Frontiers
+    year: 2022
+  - name: Special Topic Editor
+    institution: Frontiers
+    year: 2025
+  - name: Section Representative for Temporarily Employed
+    institution: University of Oslo
+    year: 2019
 
 # ----------------------------------------------------------------
 # SKILLS
@@ -99,17 +215,39 @@ committees:
 skills:
   programming:
     - name: Python
-      level: 90        # 0-100, used for radar/bar chart in visual CV
-    - name: R
-      level: 70
-    - name: LaTeX
+      level: 90
+    - name: Matlab
       level: 85
-    - name: JavaScript
-      level: 50
-  methods:
-    - name: Method A
+    - name: LaTeX
       level: 80
-    - name: Method B
+    - name: Bash
+      level: 70
+    - name: E-Basic / E-prime
+      level: 65
+    - name: Java
+      level: 50
+    - name: C++
+      level: 50
+    - name: Perl
+      level: 45
+    - name: VB / VBA
+      level: 40
+  methods:
+    - name: EEG Analysis
+      level: 92
+    - name: fMRI / rs-fMRI / rt-fMRI
+      level: 88
+    - name: Computational Modelling & Simulation
+      level: 85
+    - name: TMS / TMS-EEG
+      level: 75
+    - name: ERP Analysis
+      level: 80
+    - name: Psychometrics
+      level: 72
+    - name: Eyetracking / Pupillometry
+      level: 65
+    - name: MRI Structural Analysis
       level: 70
   languages:
     - name: Norwegian
@@ -123,11 +261,18 @@ skills:
 # GITHUB REPOS (highlighted)
 # ----------------------------------------------------------------
 github_repos:
-  - name: repo-name
-    url: https://github.com/DjFarmor/repo-name
-    description: Brief description of the repository.
+  - name: pyconscious
+    url: https://github.com/andresni/pyconscious
+    description: >
+      Python package implementing a range of EEG-based measures of consciousness
+      (Lempel-Ziv complexity, permutation entropy, integrated information proxies,
+      and more). Used in multiple published studies.
     stars: 0
-  # - name: another-repo
-  #   url: https://github.com/DjFarmor/another-repo
-  #   description: ""
-  #   stars: 0
+
+  - name: NYP (NEST YAML Platform)
+    url: https://github.com/andresni/NYP
+    description: >
+      Python/YAML framework for parameterising and running large-scale
+      thalamocortical neural network simulations in NEST. Handles network
+      initialisation, simulation, and result plotting via YAML config files.
+    stars: 0

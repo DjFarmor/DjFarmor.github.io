@@ -1,8 +1,8 @@
 ---
 title: "Are we really unconscious in \"unconscious\" states? Common assumptions revisited"
 collection: publications
-category: journal
-author_role: first
+category: manuscripts
+author_position: first
 permalink: /publication/2022-are-we-really-unconscious
 excerpt: "This perspective article argues that the standard criteria for declaring a subject unconscious—behavioral unresponsiveness and lack of memory recall—are insufficient to establish absence of experience. Drawing on empirical evidence showing frequent dream-like experience even during deep sleep and general anesthesia, the authors advocate for moving beyond binary conscious/unconscious distinctions and propose alternative frameworks for characterizing altered states."
 date: 2022-10-05

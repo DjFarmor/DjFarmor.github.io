@@ -1,8 +1,8 @@
 ---
 title: "Does Cognitive Load Affect Measures of Consciousness?"
 collection: publications
-category: journal
-author_role: first
+category: manuscripts
+author_position: first
 permalink: /publication/2024-cognitive-load-consciousness-measures
 excerpt: "A key validity concern for EEG-based consciousness measures is whether they confound conscious level with general cognitive engagement. This study tests this directly by comparing proposed measures during passive sensory attendance versus an active working memory task. Several measures showed no reliable modulation by cognitive load, supporting the case for their specificity to consciousness level rather than to arousal or task engagement more broadly."
 date: 2024-09-13

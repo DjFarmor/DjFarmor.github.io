@@ -1,8 +1,8 @@
 ---
 title: "EEG Lempel-Ziv complexity varies with sleep stage, but does not seem to track dream experience"
 collection: publications
-category: journal
-author_role: co
+category: manuscripts
+author_position: co
 permalink: /publication/2023-eeg-lempel-ziv-sleep-dreams
 excerpt: "A pre-registered replication attempt testing whether Lempel-Ziv complexity (LZC) of high-density EEG tracks both sleep depth and the richness of dream experience within NREM sleep. LZC tracked sleep stage as expected, but failed to distinguish dreaming from non-dreaming awakenings within NREM2, and a previously reported correlation with perceptual dream quality did not replicate—raising questions about the specificity of LZC as a marker of phenomenal richness."
 date: 2023-01-10
