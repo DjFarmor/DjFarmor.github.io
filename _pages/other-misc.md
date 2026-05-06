@@ -5,4 +5,7 @@ permalink: /other-misc/
 author_profile: true
 ---
 
-*To be populated.*
+## Organizing
+
+- **Organizer** — UiO LifeScience Conference (2021, 2022)
+- **Organizer** — ConsciousBrainConcepts workshop on consciousness (2021)

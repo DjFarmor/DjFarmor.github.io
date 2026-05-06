@@ -9,6 +9,6 @@ excerpt: "Loose interdisciplinary collaboration working on measuring transitions
 
 A loose collaboration between researchers within neuroscience, medicine, philosophy, psychology, and related fields. The project works along three main axes:
 
-- **Measurement**: Developing and evaluating methods for detecting and characterising transitions between states of consciousness (e.g., waking, sleep, sedation, altered states).
+- **Measurement**: Developing and evaluating methods for detecting and characterising transitions between states of consciousness (e.g., waking, sleep, sedation, altered states). Includes an ongoing review of EEG-based markers of consciousness.
 - **Phenomenology**: Understanding the experiential content of different conscious states — what it is like to be in them, and how that content varies across individuals and conditions.
-- **Theoretical limits**: Examining what can and cannot be said about consciousness in general, and about various states of consciousness in particular, given current empirical and conceptual tools.
+- **Theoretical limits**: Examining what can and cannot be said about consciousness in general, and about various states of consciousness in particular, given current empirical and conceptual tools. Includes work on metaphysical questions about the nature and boundaries of consciousness.

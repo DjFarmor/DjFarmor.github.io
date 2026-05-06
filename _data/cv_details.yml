@@ -166,6 +166,16 @@ grants:
       Main recipient of the Research Council of Norway's summer stipend
       for outstanding master's thesis work.
 
+  - title: Co-applicant on Multiple Successful Grants
+    funder: Various (with B. E. Juel & J. F. Storm)
+    amount: 0
+    currency: USD
+    year: 2016
+    description: >
+      Co-applicant on several successful grant applications in collaboration
+      with B. E. Juel and J. F. Storm, supporting consciousness research
+      at the Brain Signalling Group, University of Oslo.
+
 # ----------------------------------------------------------------
 # AWARDS & HONOURS
 # ----------------------------------------------------------------
@@ -256,6 +266,45 @@ skills:
     - name: English
       level: 95
       note: Fluent
+
+  software:
+    - FSL
+    - Matlab
+    - NEST
+    - E-prime
+    - Freesurfer
+    - Linux
+    - SPSS
+    - Office
+    - Photoshop
+    - AFNI
+    - Neuroscan
+
+  courses:
+    - name: Computational Neuroscience (FYS488)
+      institution: NMBU
+      year: 2017
+    - name: Multi-Agent Systems (TEK9010)
+      institution: University of Oslo
+      year: 2019
+    - name: Sprint School in Computational Neuroscience
+      institution: EITN (European Institute for Theoretical Neuroscience)
+      year: 2020
+    - name: Introduction to Machine Learning (IN4050)
+      institution: University of Oslo
+      year: 2022
+    - name: Neuroscience School of Advanced Studies (NSAS)
+      institution: NSAS
+      year: 2022
+    - name: Medical History (HES9320)
+      institution: University of Oslo
+      year: 2024
+    - name: Introduction to Statistics (MF9130)
+      institution: University of Oslo
+      year: 2024
+    - name: Various courses in philosophy, psychology, informatics, statistics, methods, and cognitive neuroscience
+      institution: University of Oslo
+      year: ~
 
 # ----------------------------------------------------------------
 # GITHUB REPOS (highlighted)
