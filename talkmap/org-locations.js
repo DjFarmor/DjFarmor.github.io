@@ -25,6 +25,11 @@ var addressPoints = [
     14.3932647
   ],
   [
+    "Society for Neuroscience Annual Meeting 2015<br />Society for Neuroscience (SfN); Chicago, USA",
+    41.8755616,
+    -87.6244212
+  ],
+  [
     "Talk & Panel Discussion \u2014 Student Society for Psychedelic Science<br />Student Society for Psychedelic Science, University of Oslo; Oslo, Norway",
     59.9133301,
     10.7389701
@@ -40,14 +45,29 @@ var addressPoints = [
     -89.1467759
   ],
   [
+    "Association for the Scientific Study of Consciousness 2018<br />Association for the Scientific Study of Consciousness (ASSC); Krakow, Poland",
+    50.0469432,
+    19.9971534
+  ],
+  [
+    "Talk \u2014 Molecular Medicine Department, University of Oslo (2023)<br />Molecular Medicine Department, University of Oslo; Oslo, Norway",
+    59.9133301,
+    10.7389701
+  ],
+  [
     "Talk & Poster \u2014 Human Brain Project 1st Student Conference<br />Human Brain Project 1st Student Conference; Europe",
     51.0,
     10.0
   ],
   [
+    "Society for Neuroscience Annual Meeting 2017<br />Society for Neuroscience (SfN); Washington D.C., USA",
+    38.8950982,
+    -77.0363849
+  ],
+  [
     "Poster \u2014 Reading Emotions, University of Reading<br />Reading Emotions Conference, University of Reading; Reading, UK",
-    51.4514953,
-    -0.9836342
+    51.4564242,
+    -0.9700664
   ],
   [
     "Poster \u2014 Human Brain Project International Conference: Understanding Consciousness<br />HBP-IC 1st \u2014 Understanding Consciousness; Europe",
