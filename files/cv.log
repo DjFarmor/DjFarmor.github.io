@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.3.30)  15 APR 2026 15:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.3.30)  6 MAY 2026 10:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -301,7 +301,7 @@ File: microtype.cfg 2021/12/10 v3.0b microtype main configuration file (RS)
 Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 31.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 74
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 72
 .
 
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
@@ -315,24 +315,24 @@ File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 (./cv.aux)
 \openout1 = `cv.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -368,7 +368,7 @@ LaTeX Font Info:    ... okay on input line 74.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 74.
+Package hyperref Info: Link coloring ON on input line 72.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -380,9 +380,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count278
 )
-LaTeX Info: Redefining \ref on input line 74.
-LaTeX Info: Redefining \pageref on input line 74.
-LaTeX Info: Redefining \nameref on input line 74.
+LaTeX Info: Redefining \ref on input line 72.
+LaTeX Info: Redefining \pageref on input line 72.
+LaTeX Info: Redefining \nameref on input line 72.
 
 (./cv.out) (./cv.out)
 \@outlinefile=\write3
@@ -403,18 +403,18 @@ LaTeX Info: Redefining \nameref on input line 74.
 \makeMPintoPDFobject=\count284
 \everyMPtoPDFconversion=\toks24
 )
-LaTeX Info: Redefining \microtypecontext on input line 74.
-Package microtype Info: Applying patch `item' on input line 74.
-Package microtype Info: Applying patch `toc' on input line 74.
-Package microtype Info: Applying patch `eqnum' on input line 74.
-Package microtype Info: Applying patch `footnote' on input line 74.
+LaTeX Info: Redefining \microtypecontext on input line 72.
+Package microtype Info: Applying patch `item' on input line 72.
+Package microtype Info: Applying patch `toc' on input line 72.
+Package microtype Info: Applying patch `eqnum' on input line 72.
+Package microtype Info: Applying patch `footnote' on input line 72.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 74.
+LaTeX Info: Redefining \showhyphens on input line 72.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -422,65 +422,93 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 8
-0.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 7
+8.
 
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-67.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4]
+Overfull \hbox (44.0621pt too wide) in paragraph at lines 317--317
+ []\T1/lmr/bx/n/10.95 (-20) Teach-ing.[][] [] 
+ []
+
+
+Overfull \hbox (160.25584pt too wide) in paragraph at lines 328--328
+ []\T1/lmr/bx/n/10.95 (-20) Su-per-vi-sion (Main Su-per-vi-sor).[][] [] 
+ []
+
+
+Overfull \hbox (148.6568pt too wide) in paragraph at lines 343--343
+ []\T1/lmr/bx/n/10.95 (-20) Su-per-vi-sion (Co--Su-per-vi-sor).[][] [] 
+ []
+
+[5]
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 3
+56.
  (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-67.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
+56.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-167.
+356.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-167.
+356.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 167.
+(Font)              <10.95> on input line 356.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 167.
+(Font)              <8> on input line 356.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 167.
- [2] (./cv.aux)
+(Font)              <6> on input line 356.
+ [6]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 405.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 405.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 405.
+
+Overfull \hbox (98.43771pt too wide) in paragraph at lines 419--419
+ []\T1/lmr/bx/n/10.95 (-20) Ad-di-tional Courses.[][] [] 
+ []
+
+[7] (./cv.aux)
 Package rerunfilecheck Info: File `cv.out' has not changed.
-(rerunfilecheck)             Checksum: 88B4DDEBFB5B1D35B711601CF4CB6CD1;1067.
+(rerunfilecheck)             Checksum: 695A21CB3728247DD102F035253D5285;1469.
  ) 
 Here is how much of TeX's memory you used:
- 11926 strings out of 480247
- 189496 string characters out of 5896151
- 529956 words of memory out of 5000000
- 29648 multiletter control sequences out of 15000+600000
- 517639 words of font info for 85 fonts, out of 8000000 for 9000
+ 12052 strings out of 480247
+ 190886 string characters out of 5896151
+ 530956 words of memory out of 5000000
+ 29672 multiletter control sequences out of 15000+600000
+ 531384 words of font info for 129 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 60i,5n,63p,1191b,331s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,6n,63p,1191b,488s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-ts1.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/shar
-e/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf
-/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.
-pfb>
-Output written on cv.pdf (2 pages, 153574 bytes).
+ips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/shar
+e/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/l
+m/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texm
+f/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.
+pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/
+type1/public/lm/lmsy10.pfb>
+Output written on cv.pdf (7 pages, 190690 bytes).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 500000)
- 30801 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 176 PDF objects out of 1000 (max. 8388607)
+ 150 compressed objects within 2 object streams
+ 41 named destinations out of 1000 (max. 500000)
+ 34913 words of extra memory for PDF output out of 35830 (max. 10000000)
 

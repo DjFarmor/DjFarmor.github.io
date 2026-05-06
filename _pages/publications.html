@@ -6,11 +6,8 @@ author_profile: true
 ---
 
 <style>
-  /* ── Dirt-theme palette ────────────────────────────────────────────── */
+  /* ── Accent / text colours only — backgrounds inherit from page ────── */
   :root {
-    --pub-bg          : #f3f3f3;
-    --pub-bg-mid      : #ece9e0;
-    --pub-bg-item     : #e9e6dc;
     --pub-border      : #e9dcbe;
     --pub-border-dark : #c9b98a;
     --pub-accent      : #b49368;
@@ -23,7 +20,7 @@ author_profile: true
     margin: 1.4em 0;
     border: 1px solid var(--pub-border-dark);
     border-radius: 4px;
-    background: var(--pub-bg);
+    background: transparent;
     overflow: hidden;
   }
   .pub-category > summary {
@@ -36,7 +33,7 @@ author_profile: true
     font-size: 1.05em;
     font-weight: bold;
     color: var(--pub-text);
-    background: var(--pub-bg);
+    background: transparent;
     border-bottom: 1px solid transparent;
     user-select: none;
     transition: background 0.15s;
@@ -52,9 +49,9 @@ author_profile: true
   .pub-category[open] > summary::before { transform: rotate(90deg); }
   .pub-category[open] > summary {
     border-bottom-color: var(--pub-border);
-    background: var(--pub-bg-mid);
+    background: rgba(180,147,104,0.06);
   }
-  .pub-category > summary:hover { background: var(--pub-bg-mid); }
+  .pub-category > summary:hover { background: rgba(180,147,104,0.06); }
 
   .pub-category-body {
     padding: 0.75em 1em;
@@ -67,7 +64,7 @@ author_profile: true
   .pub-role {
     border: 1px solid var(--pub-border);
     border-radius: 3px;
-    background: var(--pub-bg-mid);
+    background: transparent;
     overflow: hidden;
   }
   .pub-role > summary {
@@ -94,7 +91,7 @@ author_profile: true
   }
   .pub-role[open] > summary::before { transform: rotate(90deg); }
   .pub-role[open] > summary { border-bottom-color: var(--pub-border); }
-  .pub-role > summary:hover { background: var(--pub-bg-item); }
+  .pub-role > summary:hover { background: rgba(0,0,0,0.03); }
 
   .pub-role-body {
     padding: 0.6em 0.85em;
@@ -106,7 +103,7 @@ author_profile: true
   /* ── Individual publication entries ───────────────────────────────── */
   .pub-entry {
     border-left: 3px solid var(--pub-accent);
-    background: var(--pub-bg-item);
+    background: rgba(180,147,104,0.05);
     border-radius: 0 3px 3px 0;
     overflow: hidden;
   }

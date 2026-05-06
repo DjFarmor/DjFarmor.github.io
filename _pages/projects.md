@@ -6,11 +6,8 @@ author_profile: true
 ---
 
 <style>
-  /* ── Dirt-theme palette ────────────────────────────────────────────── */
+  /* ── Accent / text colours only — backgrounds inherit from page ────── */
   :root {
-    --proj-bg          : #f3f3f3;
-    --proj-bg-mid      : #ece9e0;
-    --proj-bg-item     : #e9e6dc;
     --proj-border      : #e9dcbe;
     --proj-border-dark : #c9b98a;
     --proj-accent      : #b49368;
@@ -23,7 +20,7 @@ author_profile: true
     margin: 1.4em 0;
     border: 1px solid var(--proj-border-dark);
     border-radius: 4px;
-    background: var(--proj-bg);
+    background: transparent;
     overflow: hidden;
   }
   .proj-category > summary {
@@ -36,7 +33,7 @@ author_profile: true
     font-size: 1.05em;
     font-weight: bold;
     color: var(--proj-text);
-    background: var(--proj-bg);
+    background: transparent;
     border-bottom: 1px solid transparent;
     user-select: none;
     transition: background 0.15s;
@@ -52,9 +49,9 @@ author_profile: true
   .proj-category[open] > summary::before { transform: rotate(90deg); }
   .proj-category[open] > summary {
     border-bottom-color: var(--proj-border);
-    background: var(--proj-bg-mid);
+    background: rgba(180,147,104,0.06);
   }
-  .proj-category > summary:hover { background: var(--proj-bg-mid); }
+  .proj-category > summary:hover { background: rgba(180,147,104,0.06); }
 
   .proj-category-body {
     padding: 0.75em 1em;
@@ -66,7 +63,7 @@ author_profile: true
   /* ── Individual project entries ───────────────────────────────────── */
   .proj-entry {
     border-left: 3px solid var(--proj-accent);
-    background: var(--proj-bg-item);
+    background: rgba(180,147,104,0.05);
     border-radius: 0 3px 3px 0;
     overflow: hidden;
   }

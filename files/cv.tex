@@ -1,5 +1,5 @@
 %% Curriculum Vitae -- Andre Sevenius Nilsen
-%% Full CV. Compiled automatically via GitHub Actions -> files/cv.pdf
+%% Full CV. Compile: pdflatex cv.tex && pdflatex cv.tex
 
 \documentclass[11pt, a4paper]{article}
 
@@ -42,7 +42,6 @@
 \titlespacing{\subsection}{0pt}{0.8em}{0em}
 
 % ---------- Entry macro ----------
-% Usage: \cventry{YEAR(S)}{TITLE}{INSTITUTION}{NOTES (optional)}
 \newcommand{\cventry}[4]{%
   \noindent
   \begin{minipage}[t]{2.7cm}%
@@ -57,7 +56,6 @@
   \par\vspace{0.45em}%
 }
 
-% ---------- Simple label/value row ----------
 \newcommand{\cvitem}[2]{%
   \noindent
   \begin{minipage}[t]{2.7cm}%
@@ -76,102 +74,362 @@
 
 % ---------- Header ----------
 \begin{center}
-  {\Huge\bfseries Andr\'e Sevenius Nilsen}\\[0.5em]
+  {\Huge\bfseries Andr\'e Sevenius Nilsen, PhD}\\[0.5em]
   {\large Scientist \textbullet{} Writer \textbullet{} Philosopher}\\[0.6em]
   Oslo, Norway
   \quad\textbar\quad
   \href{mailto:sevenius.nilsen@gmail.com}{sevenius.nilsen@gmail.com}
   \quad\textbar\quad
   \href{https://djfarmor.github.io}{djfarmor.github.io}\\[0.3em]
-  \href{https://scholar.google.com/citations?user=A1E5s7AAAAAJ&hl=en}{Google Scholar}
+  \href{https://scholar.google.com/citations?user=A1E5s7AAAAAJ\&hl=en}{Google Scholar}
   \quad\textbar\quad
   \href{https://www.linkedin.com/in/andre-sevenius-nilsen-b70771190}{LinkedIn}
   \quad\textbar\quad
   \href{https://bsky.app/profile/turntwine.bsky.social}{Bluesky}
 \end{center}
 
-\vspace{0.8em}
+\vspace{0.5em}
 
 % ==========================================================
-\section{Employment}
+\section{Research Interests}
 
-\cventry{XXXX--present}{Position Title}{Institution, City}{}
-\cventry{XXXX--XXXX}{Previous Position}{Institution, City}{}
+Intelligence, consciousness, decision making, the integrated brain, psychology, AI,
+political and social science, metaphysics, game theory, complexity science, ethics,
+philosophy of science, physics, futurism, history, simulation and modelling.
 
 % ==========================================================
 \section{Education}
 
-\cventry{XXXX}{Ph.D., Field}{University, City}%
-  {Thesis: \textit{Title here.} Supervisor: Name.}
-\cventry{XXXX}{M.Sc., Field}{University, City}{}
-\cventry{XXXX}{B.Sc., Field}{University, City}{}
+\cventry{2026}{Ph.D., Medicine and Health Science}{Institute of Basic Medical Sciences, University of Oslo}%
+  {Thesis: \textit{Consciousness: When Is It Present And How Would We Know? Testing Measures and Assumptions for Detecting Consciousness Across States and Substrates.}\\
+   Supervisors: Prof.\ J.\,F.\ Storm, PhD B.\,E.\ Juel, Prof.\ R.\,J.\ Huster.}
+
+\cventry{2014}{M.Sc., Cognitive Neuroscience}{Institute of Psychology, University of Oslo}%
+  {Thesis: \textit{Right Inferior Frontal Gyrus and Motor Response Inhibition: A Real-Time fMRI Neurofeedback Study.}\\
+   Grade A. Supervisors: Prof.\ Tor Endestad \& PhD Dag Aln\ae s.}
+
+\cventry{2012}{B.Sc., Informatics, Language, Logic and Psychology}{Institute of Informatics, University of Oslo}%
+  {Thesis: \textit{The Link Between Numerical Time Estimates and Stored Temporal References.}\\
+   Grade A. Supervisor: PhD Torleif Hallkjellsvik.}
+
+% ==========================================================
+\section{Employment}
+
+\cventry{2025--present}{Researcher}{Kongsberg Hospital (PI: M.D.\ G.\ Ernst)}%
+  {Responsible for funding applications and data analysis. Projects include a study on
+   combined ketamine and TMS for depression, and memory formation and awareness during
+   propofol sedation (UiO \& Kongsberg Hospital).}
+
+\cventry{2016--present}{Researcher / PhD Candidate}{University of Oslo, Brain Signalling Group (PI: Prof.\ J.\,F.\ Storm)}%
+  {PhD candidate from 2020 with supervisors B.\,E.\ Juel \& J.\,F.\ Storm. Thesis defence: March 2026.
+   Responsible for all aspects of the scientific process --- study design, data acquisition,
+   analysis, and writing. Projects span behavioural and pharmacological experiments and
+   modelling/simulation of large-scale neural networks. Topics include anaesthesia, sleep,
+   consciousness, psychedelics, and computational modelling of thalamocortical systems.
+   Methods: TMS-EEG, ERP, anaesthesia administration, sleep deprivation, behavioural paradigms.}
+
+\cventry{2016}{Researcher}{University of Oslo, Hedonic Pharmacology Lab (PI: Prof.\ S.\ Leknes)}%
+  {Co-responsible for implementation and analysis; assisted in acquisition. Study on binocular
+   rivalry, salience, and aggression using intranasal oxytocin, eyetracking, and behavioural paradigms.}
+
+\cventry{2015--2016}{Researcher}{Innlandet Hospital Trust (PI: Assoc.\ Prof.\ T.\ Endestad)}%
+  {Main responsible for MRI, fMRI, and resting-state fMRI analysis, interpretation, manuscript writing
+   and submission. Psychological trauma study using MRI and fMRI.}
+
+\cventry{2015--2016}{Scientific Technician}{University of Oslo (Assoc.\ Prof.\ R.\ Huster)}%
+  {Assisting in design, scripting, and implementation of multimodal EEG-fMRI neurofeedback.
+   Behavioural inhibition study using real-time fMRI and EEG.}
+
+\cventry{2014--2016}{Researcher}{University of Oslo, Hedonic Pharmacology Lab (PI: PhD S.\ Leknes)}%
+  {Consulting on design, scripting, acquisition, and analysis. Craving and reward study using
+   morphine administration, fMRI, rs-fMRI, biometrics, and behavioural paradigms.}
+
+\cventry{2014--2016}{Scientific Assistant}{NKVTS / University of Oslo (PI: PhD I.\ Blix)}%
+  {Main responsible for analysis; co-responsible for acquisition, interpretation, manuscript,
+   and submission. Psychological trauma study using MRI, fMRI, rs-fMRI, and psychometrics.}
+
+\cventry{2014}{ERP-Technician}{Rikshospitalet (Oslo University Hospital), Prof.\ S.\ Andersson}%
+  {Responsible for EEG acquisition and ERP analysis for diagnostic purposes.}
+
+\cventry{2014}{Researcher}{SafeeCom AS (PI: Dr.\ B.\,C.\ \O stberg)}%
+  {Main responsible for prototyping of medical technologies: medical UWB radar scanner
+   and vibrational diagnostic tool using Matlab and Arduino.}
+
+\cventry{2012--2013}{Scientific Assistant}{University of Oslo (PI: PhD I.\ Blix)}%
+  {Co-responsible for fMRI/MRI acquisition including recent traffic accident survivors.
+   Psychological trauma study using MRI, fMRI, rs-fMRI, psychometrics, and behavioural paradigms.}
+
+\cventry{2012--2013}{Lab Manager}{Cognitive Laboratories, University of Oslo (Assoc.\ Prof.\ T.\ Endestad)}%
+  {Responsible for data acquisition, student lab days, analysis, booking, and IT communication.}
 
 % ==========================================================
 \section{Publications}
 
 \subsection*{Journal Articles}
 
-\begin{enumerate}[leftmargin=2em, label={[\arabic*]}, itemsep=0.3em]
-  \item Author, \textbf{A.S.N.}, \& Author. (Year).
-        Title of article.
-        \textit{Journal Name}, \textit{Volume}(Issue), pp.~xx--xx.
-        \href{https://doi.org/}{doi:xx.xxxx/xxxxx}
+\begin{enumerate}[leftmargin=2em, label={[\arabic*]}, itemsep=0.4em]
+
+  \item Bajwa, I.\,J., \textbf{Nilsen, A.\,S.}, \ldots, Storm, J.\,F., \& Juel, B.\,E. (2025).
+        A repeated awakening study exploring the capacity of complexity measures to capture
+        dreaming during propofol sedation.
+        \textit{Scientific Reports}, 15(1).
+
+  \item Wong, W., \ldots, \textbf{Nilsen, A.\,S.}, \ldots, \& Tsuchiya, N. (2025).
+        A dream EEG and mentation database.
+        \textit{Nature Communications}, 16(1).
+
+  \item \textbf{Sevenius Nilsen, A.}, Storm, J.\,F., \& Juel, B.\,E. (2024).
+        Does Cognitive Load Affect Measures of Consciousness?
+        \textit{Brain Sciences}, 14(9):919.
+        \href{https://doi.org/10.3390/brainsci14090919}{doi:10.3390/brainsci14090919}
+
+  \item \textbf{Sevenius Nilsen, A.}, Arena, A., \& Storm, J.\,F. (2024).
+        Exploring effects of anesthesia on complexity, differentiation, and integrated
+        information in rat EEG.
+        \textit{Neuroscience of Consciousness}, 2024(1):niae021.
+        \href{https://doi.org/10.1093/nc/niae021}{doi:10.1093/nc/niae021}
+
+  \item Aamodt, A., \textbf{Sevenius Nilsen, A.}, Markhus, R., Kusztor, A.,
+        HasanzadehMoghadam, F., Kauppi, N., Th\"urer, B., Storm, J.\,F., \& Juel, B.\,E. (2023).
+        EEG Lempel-Ziv complexity varies with sleep stage, but does not seem to track
+        dream experience.
+        \textit{Frontiers in Human Neuroscience}, 16:987714.
+        \href{https://doi.org/10.3389/fnhum.2022.987714}{doi:10.3389/fnhum.2022.987714}
+
+  \item \textbf{Sevenius Nilsen, A.}, Juel, B.\,E., Th\"urer, B., Aamodt, A., \& Storm, J.\,F. (2022).
+        Are we really unconscious in `unconscious' states? Common assumptions revisited.
+        \textit{Frontiers in Human Neuroscience}, 16:987051.
+        \href{https://doi.org/10.3389/fnhum.2022.987051}{doi:10.3389/fnhum.2022.987051}
+
+  \item \textbf{Nilsen, A.\,S.}, Juel, B.\,E., Farnes, N., Romundstad, L., \& Storm, J.\,F. (2021).
+        Behavioral effects of sub-anesthetic ketamine in a go/no-go task.
+        \textit{Journal of Psychedelic Studies}, 4(3), 156--162.
+
+  \item Halder, S., Juel, B.\,E., \textbf{Sevenius Nilsen, A.}, Raghavan, L.\,V., \& Storm, J.\,F. (2021).
+        Changes in measures of consciousness during anaesthesia of one hemisphere (Wada test).
+        \textit{NeuroImage}, 226:117566.
+        \href{https://doi.org/10.1016/j.neuroimage.2020.117566}{doi:10.1016/j.neuroimage.2020.117566}
+
+  \item Aamodt, A., \textbf{Sevenius Nilsen, A.}, Th\"urer, B., HasanzadehMoghadam, F.,
+        Kauppi, N., Juel, B.\,E., \& Storm, J.\,F. (2021).
+        EEG Signal Diversity Varies With Sleep Stage and Aspects of Dream Experience.
+        \textit{Frontiers in Psychology}, 12:655884.
+        \href{https://doi.org/10.3389/fpsyg.2021.655884}{doi:10.3389/fpsyg.2021.655884}
+
+  \item Farnes, N., Juel, B.\,E., \textbf{Nilsen, A.\,S.}, Romundstad, L.\,G., \& Storm, J.\,F. (2020).
+        Increased signal diversity/complexity of spontaneous EEG, but not evoked EEG responses,
+        in ketamine-induced psychedelic state in humans.
+        \textit{PLOS ONE}, 15(11), e0242056.
+
+  \item Kusztor, A., Raud, L., Juel, B.\,E., \textbf{Nilsen, A.\,S.}, Storm, J.\,F., \& Huster, R.\,J. (2019).
+        Sleep deprivation differentially affects subcomponents of cognitive control.
+        \textit{Sleep}, 42(4), zsz016.
+
+  \item \textbf{Sevenius Nilsen, A.}, Juel, B.\,E., \& Marshall, W. (2019).
+        Evaluating Approximations and Heuristic Measures of Integrated Information.
+        \textit{Entropy}, 21(5):525.
+        \href{https://doi.org/10.3390/e21050525}{doi:10.3390/e21050525}
+
+  \item Wortinger, L.\,A., Endestad, T., Melinder, A.\,M.\,D., \O ie, M.\,G.,
+        \textbf{Nilsen, A.\,S.}, \& Wyller, V.\,B. (2016).
+        Aberrant resting-state functional connectivity in the salience network of adolescent
+        chronic fatigue syndrome.
+        \textit{PLOS ONE}, 11(7), e0159351.
+
+  \item \textbf{Nilsen, A.\,S.}, Blix, I., Leknes, S., Ekeberg, \O ., Skogstad, L.,
+        Endestad, T., \& Heir, T. (2016).
+        Brain activity in response to trauma-specific, negative, and neutral stimuli:
+        A fMRI study of recent road traffic accident survivors.
+        \textit{Frontiers in Psychology}, 7, 1173.
+
+  \item \textbf{Nilsen, A.\,S.}, Hilland, E., Kogstad, N., Heir, T., Hauff, E., Lien, L.,
+        \& Endestad, T. (2016).
+        Right temporal cortical hypertrophy in resilience to trauma: an MRI study.
+        \textit{European Journal of Psychotraumatology}, 7.
+        \href{http://doi.org/10.3402/ejpt.v7.31314}{doi:10.3402/ejpt.v7.31314}
+
 \end{enumerate}
 
-\subsection*{Conference Proceedings}
+\subsection*{Preprints \& Working Papers}
 
-\begin{enumerate}[leftmargin=2em, label={[\arabic*]}, itemsep=0.3em]
-  \item Author, \textbf{A.S.N.}, \& Author. (Year).
-        Title of paper.
-        In \textit{Proceedings of Conference Name} (pp.~xx--xx).
+\begin{enumerate}[leftmargin=2em, label={[\arabic*]}, itemsep=0.4em]
+
+  \item \textbf{Sevenius Nilsen, A.} (2026).
+        Newcomb's Paradox Under Epistemic Uncertainty: A Two-Stage Policy Analysis.
+        \textit{PhilArchive}.
+
+  \item \textbf{Nilsen, A.\,S.}, Juel, B.\,E., Th\"urer, B., \& Storm, J.\,F. (2020).
+        Proposed EEG measures of consciousness: a systematic, comparative review.
+        \textit{PsyArXiv}.
+
 \end{enumerate}
 
-\subsection*{Books \& Book Chapters}
+\subsection*{Theses}
 
-\begin{enumerate}[leftmargin=2em, label={[\arabic*]}, itemsep=0.3em]
-  \item \textbf{A.S.N.} (Year). \textit{Book Title}. Publisher.
+\begin{enumerate}[leftmargin=2em, label={[\arabic*]}, itemsep=0.4em]
+
+  \item \textbf{Sevenius Nilsen, A.} (2026).
+        \textit{Consciousness: When Is It Present And How Would We Know?
+        Testing Measures and Assumptions for Detecting Consciousness Across States and Substrates.}
+        PhD Thesis, University of Oslo.
+
+  \item \textbf{Nilsen, A.\,S.} (2014).
+        \textit{Right Inferior Frontal Gyrus and Motor Response Inhibition:
+        A Real-Time fMRI Neurofeedback Study.}
+        MSc Thesis, University of Oslo.
+        \href{http://hdl.handle.net/10852/39807}{hdl.handle.net/10852/39807}
+
+\end{enumerate}
+
+\subsection*{Popular Science}
+
+\begin{enumerate}[leftmargin=2em, label={[\arabic*]}, itemsep=0.4em]
+  \item \textbf{Sevenius Nilsen, A.} (2021). Popular science article. \textit{MedisinBloggen}.
+  \item \textbf{Sevenius Nilsen, A.} (2012--2014). Three popular science articles.
+        \textit{Speilvendt}, student journal of psychology, University of Oslo.
 \end{enumerate}
 
 % ==========================================================
 \section{Talks \& Presentations}
 
-\cventry{XXXX}{Talk Title}{Conference / Institution, City}{}
-\cventry{XXXX}{Talk Title}{Conference / Institution, City}{}
+\cventry{2025}{Invited Talk}{Molecular Medicine Department, University of Oslo, Oslo}{}
+\cventry{2023}{Talk \& Panel Discussion}{Student Society for Psychedelic Science, University of Oslo, Oslo}{}
+\cventry{2023}{Talk}{Molecular Medicine Department, University of Oslo, Oslo}{}
+\cventry{2021}{Abstract \& Talk}{ConsciousBrainConcepts Annual Workshop, Oslo}{}
+\cventry{2021}{Abstract \& Talk}{Nordic Graduate Conference on the Philosophy of Mind}{}
+\cventry{2019}{Abstract \& Poster}{Association for the Scientific Study of Consciousness (ASSC)}{}
+\cventry{2018}{Abstract \& Poster}{Society for Neuroscience (SfN), San Diego, CA, USA}{}
+\cventry{2018}{Abstract \& Poster}{Federation of European Neuroscience Societies (FENS), Berlin, Germany}{}
+\cventry{2018}{Abstract \& Poster}{Association for the Scientific Study of Consciousness (ASSC), Krakow, Poland}{}
+\cventry{2018}{Abstract \& Poster}{HBP-IC 1st --- Understanding Consciousness}{}
+\cventry{2017}{Abstract, Poster \& Talk}{Human Brain Project 1st Student Conference}{}
+\cventry{2017}{Abstract \& Poster}{Nordic Neuroscience Meeting}{}
+\cventry{2017}{Abstract \& Poster}{Society for Neuroscience (SfN), Washington D.C., USA}{}
+\cventry{2016}{Abstract \& Poster}{Reading Emotions, University of Reading, UK}{}
+\cventry{2015}{Abstract \& Poster}{Society for Neuroscience (SfN), Chicago, USA}{}
 
 % ==========================================================
-\section{Teaching}
+\section{Teaching \& Supervision}
 
-\cventry{XXXX}{Course Title}{Institution}{Role: Lecturer.}
+\subsection*{Teaching}
+
+\cventry{2021--2024}{PSY4318: Multidisciplinary Studies of Consciousness}{University of Oslo}%
+  {Course coordinator, syllabus designer, and lecturer.}
+
+\cventry{2018}{MBV-SP100: Advanced Neurobiology}{University of Oslo}%
+  {Intermittent lecturer.}
+
+\cventry{2013--2014}{PSY1010: Research Methods and Statistics}{University of Oslo}%
+  {Seminar leader.}
+
+\subsection*{Supervision (Main Supervisor)}
+
+\cventry{2024}{MSc, Neuroscience}{Universitat Oldenburg}%
+  {Sub-anaesthetic ketamine for depression --- predictive factors.}
+\cventry{2022}{MSc, Cognitive Neuroscience}{University of Oslo}%
+  {Neurodynamic and experiential effects of sub-anaesthetic ketamine.}
+\cventry{2022}{BSc, Neuroscience}{Universitat Oldenburg}%
+  {Repeated masking and recurrent processing theory of consciousness.}
+\cventry{2020}{MSc, Informatics}{University of Oslo}%
+  {Evolutionary dynamics implemented in a neuromorphic computer.}
+\cventry{2019}{MSc, Psychology}{University of Oslo}%
+  {Gambling and addiction --- an exploration of the effect of personality on gambling.}
+\cventry{2018}{MSc, Cognitive Neuroscience}{University of Oslo}%
+  {Semantic and motoric inhibition --- same in kind or different in mind.}
+
+\subsection*{Supervision (Co-Supervisor)}
+
+\cventry{2020}{MSc, Cognitive Neuroscience}{University of Oslo}%
+  {Validation of measures of consciousness during propofol anaesthesia.}
+\cventry{2019}{MSc, Cognitive Neuroscience}{University of Oslo}%
+  {Sub-anaesthetic ketamine and EEG-based measures of consciousness.}
+\cventry{2019}{MSc, Cognitive Neuroscience}{University of Oslo}%
+  {Sleep deprivation effect on motoric inhibition.}
+
+\noindent\small Also supervised 6 students in short-term internship projects.\normalsize
 
 % ==========================================================
 \section{Grants \& Stipends}
 
-\cventry{XXXX}{Grant Name}{Funding Agency}{Amount: XXX,XXX NOK.}
+\cventry{2025}{Grant for $\sim$2 Post-Doctoral Positions}{Helse S\o r-\O st}%
+  {\textasciitilde\$400k USD. Responsible for writing the application.
+   Project: memory formation and awareness during propofol sedation (UiO \& Kongsberg Hospital).}
+
+\cventry{2025}{NFFO Stipend --- Consciousness Science Textbook}%
+  {Norsk faglitter\ae r forfatter- og oversetterforening (NFFO)}%
+  {\textasciitilde\$30k USD. Stipend for writing an introductory textbook on consciousness science.}
+
+\cventry{2013}{NFR Summer Stipend (Master Thesis)}{Norges Forskningsr\aa d (NFR)}%
+  {\textasciitilde\$2k USD. Main recipient of the Research Council of Norway's summer stipend.}
+
+\cventry{2016--}{Co-applicant on Multiple Successful Grants}{Various (with B.\,E.\ Juel \& J.\,F.\ Storm)}%
+  {Co-applicant on several successful grant applications supporting consciousness research at UiO.}
 
 % ==========================================================
 \section{Awards \& Honours}
 
-\cventry{XXXX}{Award Name}{Awarding Body}{}
+\cventry{2025}{3rd Place --- Forsker Grand Prix (Local Final)}{Forsker Grand Prix / Forskningsdagene}%
+  {3rd place in the local final of Norway's national science communication competition.}
 
 % ==========================================================
-\section{Service}
+\section{Service \& Editorial}
 
-\begin{itemize}[leftmargin=2em, itemsep=0.2em]
-  \item \textbf{Reviewer:} \textit{Journal Name A}, \textit{Journal Name B}
-  \item \textbf{Committee member:} Committee name
-\end{itemize}
+\cvitem{Review Editor}{Frontiers in Neuroscience / Neuroprosthetics (2022--present)}
+\cvitem{Guest Assoc.\ Editor}{Frontiers in Brain Health and Clinical Neuroscience (2022--present)}
+\cvitem{Lead Editor}{Special Issue: \textit{``Comparing Altered States of Consciousness:
+  Phenomenology, Physiology, and Neural Mechanisms''}, Frontiers in Brain Health and Clinical Neuroscience (2025--2026)}
+
+\medskip\noindent
+\textbf{Ad hoc reviewer:} \textit{Science}; \textit{Nature}; \textit{Communications Biology};
+\textit{Human Brain Mapping}; \textit{NeuroImage}; \textit{Clinical EEG and Neuroscience};
+\textit{Frontiers in Neuroscience}; \textit{Frontiers in Integrative Neuroscience};
+\textit{Frontiers in Neurology}; \textit{Journal of Psychedelic Studies};
+\textit{European Child \& Adolescent Psychiatry}; \textit{Cellular Physiology and Biochemistry};
+\textit{Social Cognitive and Affective Neuroscience}.
+
+\medskip
+\cvitem{Organizer}{UiO LifeScience Conference (2021, 2022)}
+\cvitem{Organizer}{ConsciousBrainConcepts Workshop on Consciousness (2021)}
+\cvitem{Examiner}{External examiner, MSc Cognitive Neuroscience, UiO (2016); Oral examiner $\times$7 (2018, 2021--2025)}
+\cvitem{Section Rep.}{Section Representative for Temporarily Employed, UiO (2019--2021)}
+
+% ==========================================================
+\section{Software \& Repositories}
+
+\cventry{}{\href{https://github.com/andresni/pyconscious}{PyConscious}}{Python package}{%
+  EEG-based measures of consciousness (Lempel-Ziv complexity, permutation entropy,
+  integrated information proxies, and more). Used in multiple published studies.}
+
+\cventry{}{\href{https://github.com/andresni/NYP}{NYP (NEST YAML Platform)}}{Python/YAML framework}{%
+  Parametrising and running large-scale thalamocortical neural network simulations in NEST.
+  $\sim$50{,}000-neuron model of thalamocortical dynamics.}
 
 % ==========================================================
 \section{Skills}
 
-\cvitem{Programming}{Python, R, \LaTeX}
+\cvitem{Programming}{Python, Matlab, Bash, \LaTeX, E-Basic, Java, C++, Perl, VB}
+\cvitem{Methods}{EEG, fMRI, rs-fMRI, rt-fMRI, MRI, TMS, TMS-EEG, ERP, eyetracking,
+  pupillometry, psychometrics, computational modelling \& simulation}
+\cvitem{Software}{FSL, Matlab, NEST, E-prime, Freesurfer, Linux, SPSS, AFNI, Neuroscan}
 \cvitem{Languages}{Norwegian (native), English (fluent)}
-\cvitem{Methods}{Method A, Method B}
+
+\subsection*{Additional Courses}
+
+\cvitem{2024}{Medical History (HES9320), UiO;
+  Introduction to Statistics (MF9130), UiO}
+\cvitem{2022}{Introduction to Machine Learning (IN4050), UiO;
+  Neuroscience School of Advanced Studies (NSAS)}
+\cvitem{2020}{Sprint School in Computational Neuroscience, EITN}
+\cvitem{2019}{Multi-Agent Systems (TEK9010), UiO}
+\cvitem{2017}{Computational Neuroscience (FYS488), NMBU}
+\cvitem{Various}{Courses in philosophy, psychology, informatics, statistics, methods,
+  and cognitive neuroscience (UiO)}
 
 % ==========================================================
-\section{Other Interests}
+\section{Other}
 
-Consciousness science, philosophy of mind, artificial intelligence,
-speculative fiction, game design.
+\cvitem{Private tutoring}{Research methods and statistics (2014--2015)}
+\cvitem{Popular science}{1 article in \textit{MedisinBloggen} (2021);
+  3 articles in \textit{Speilvendt} (2012--2014)}
 
 \end{document}
