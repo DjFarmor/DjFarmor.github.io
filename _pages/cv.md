@@ -77,8 +77,8 @@ details[open] summary { color: var(--global-text-color); }
 <div class="cv-details-row">
   <a href="/cv/education/">Education</a>
   <a href="/cv/employment/">Employment</a>
-  <a href="/cv/grants/">Grants &amp; Stipends</a>
-  <a href="/cv/awards/">Awards</a>
+  <a href="/cv/skills/">Skills</a>
+  <a href="/cv/interests/">Interests</a>
 </div>
 </details>
 

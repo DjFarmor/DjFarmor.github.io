@@ -39,9 +39,9 @@ academic_other:
     children:
       - title: "Reviews"
         url: /reviews/
-      - title: "Interests"
-        url: /interests/
-      - title: "Skills"
-        url: /skills/
+      - title: "Grants & Stipends"
+        url: /academic-other/grants/
+      - title: "Awards & Honours"
+        url: /academic-other/awards/
       - title: "Other"
         url: /academic-other-misc/

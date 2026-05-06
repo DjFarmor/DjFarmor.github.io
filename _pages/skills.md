@@ -1,10 +1,8 @@
 ---
 layout: single
 title: "Skills"
-permalink: /skills/
+permalink: /cv/skills/
 author_profile: true
-sidebar:
-  nav: "academic_other"
 ---
 
 *To be populated.*

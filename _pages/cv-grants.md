@@ -1,8 +1,10 @@
 ---
 layout: single
 title: "Grants & Stipends"
-permalink: /cv/grants/
+permalink: /academic-other/grants/
 author_profile: true
+sidebar:
+  nav: "academic_other"
 ---
 
 {% assign grants = site.data.cv_details.grants %}
@@ -13,7 +15,7 @@ author_profile: true
 
 <p style="font-size:0.9em; color:var(--global-text-color-light);">
   {{ grants.size }} grant{% if grants.size != 1 %}s{% endif %} &mdash;
-  total: {{ total | divided_by: 1000 }}k NOK
+  total: ~${{ total | divided_by: 1000 }}k USD
 </p>
 
   {% for g in grants %}
@@ -33,4 +35,3 @@ author_profile: true
 *To be populated — edit `_data/cv_details.yml`.*
 {% endif %}
 
-[← Back to CV](/cv/)

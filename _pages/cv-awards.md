@@ -1,8 +1,10 @@
 ---
 layout: single
 title: "Awards & Honours"
-permalink: /cv/awards/
+permalink: /academic-other/awards/
 author_profile: true
+sidebar:
+  nav: "academic_other"
 ---
 
 {% assign awards = site.data.cv_details.awards %}
@@ -21,4 +23,3 @@ author_profile: true
 *To be populated — edit `_data/cv_details.yml`.*
 {% endif %}
 
-[← Back to CV](/cv/)

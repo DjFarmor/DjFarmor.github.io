@@ -5,7 +5,7 @@ permalink: /services/
 author_profile: true
 ---
 
-I am available for the following engagements. Feel free to reach out at [{{ site.author.email }}](mailto:{{ site.author.email }}).
+I like to be of service. Below are some things I like to do. I might even do it for free! To enquire about any of the below, please send a brief description of what you have in mind to [{{ site.author.email }}](mailto:{{ site.author.email }}).
 
 ---
 
@@ -33,4 +33,4 @@ I am available for consulting on research design, scientific communication, and 
 
 ---
 
-*To enquire about any of the above, please send a brief description of what you have in mind to [{{ site.author.email }}](mailto:{{ site.author.email }}).*
+

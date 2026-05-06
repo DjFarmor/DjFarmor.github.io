@@ -139,8 +139,8 @@ education:
 grants:
   - title: Grant for ~2 Post-Doctoral Positions
     funder: Helse Sør-Øst
-    amount: 0
-    currency: NOK
+    amount: 400000
+    currency: USD
     year: 2025
     description: >
       Responsible for writing a successful grant application to Helse Sør-Øst
@@ -150,8 +150,8 @@ grants:
 
   - title: NFFO Stipend — Consciousness Science Textbook
     funder: Norsk faglitterær forfatter- og oversetterforening (NFFO)
-    amount: 0
-    currency: NOK
+    amount: 30000
+    currency: USD
     year: 2025
     description: >
       Stipend awarded for writing an introductory textbook on consciousness
@@ -159,8 +159,8 @@ grants:
 
   - title: NFR Summer Stipend (Master Thesis)
     funder: Norges Forskningsråd (NFR)
-    amount: 0
-    currency: NOK
+    amount: 2000
+    currency: USD
     year: 2013
     description: >
       Main recipient of the Research Council of Norway's summer stipend
@@ -181,7 +181,7 @@ awards:
 # SERVICE / REVIEWS
 # ----------------------------------------------------------------
 reviews:
-  total_count: 0          # approximate total; update when known
+  total_count: 13         # count of individual manuscript reviews
   journals:
     - name: Nature Communications Biology
       count: 0

@@ -168,7 +168,7 @@ author_profile: true
   </div>
   {% if total_grant > 0 %}
   <p style="font-size:0.82em; color:var(--global-text-color-light); margin:0.5em 0 0;">
-    Total funding: {{ total_grant | divided_by: 1000 }}k NOK
+    Total funding: ~${{ total_grant | divided_by: 1000 }}k USD
   </p>
   {% endif %}
 </div>

@@ -10,6 +10,6 @@ sidebar:
 Miscellaneous academic activities that don't fit neatly elsewhere.
 
 - [Reviews](/reviews/) — Peer review activity and editorial service.
-- [Interests](/interests/) — Research interests and areas of focus.
-- [Skills](/skills/) — Technical and methodological competencies.
+- [Grants & Stipends](/academic-other/grants/) — Research funding received.
+- [Awards & Honours](/academic-other/awards/) — Academic prizes and distinctions.
 - [Other](/academic-other-misc/) — Everything else.

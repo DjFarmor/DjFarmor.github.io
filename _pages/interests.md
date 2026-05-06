@@ -1,10 +1,8 @@
 ---
 layout: single
 title: "Research Interests"
-permalink: /interests/
+permalink: /cv/interests/
 author_profile: true
-sidebar:
-  nav: "academic_other"
 ---
 
 *To be populated.*
